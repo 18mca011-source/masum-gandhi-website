@@ -90,12 +90,12 @@ export default function HealthcareGuests() {
                 key={`${doc.name}-${i}`}
                 className="group flex flex-col items-center cursor-pointer transition-all duration-300 hover:-translate-y-4"
               >
-                <div className="relative w-full max-w-[320px] md:max-w-none mx-auto aspect-square md:aspect-[4/5] rounded-2xl overflow-hidden ring-2 ring-transparent group-hover:ring-yellow-400 transition-all duration-300 shadow-lg group-hover:shadow-yellow-400/30 group-hover:shadow-2xl">
+                <div className="relative w-full max-w-[320px] md:max-w-none mx-auto aspect-square rounded-2xl overflow-hidden ring-2 ring-transparent group-hover:ring-yellow-400 transition-all duration-300 shadow-lg group-hover:shadow-yellow-400/30 group-hover:shadow-2xl">
                   <Image
                     src={doc.image}
                     alt={doc.name}
                     fill
-                    className="object-cover object-center"
+                    className="object-cover object-top"
                     sizes="(max-width: 768px) 320px, 33vw"
                   />
                 </div>
