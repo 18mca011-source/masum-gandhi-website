@@ -4,15 +4,15 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
 const doctors = [
-  { name: "Dr. Kunjan Joshi", role: "Periodontist", image: "https://res.cloudinary.com/dx9zlffut/image/upload/v1779680173/IMG_2062_1_li8tou.jpg" },
-  { name: "Dr. Shayoni Patel", role: "Orthodontist", image: "https://res.cloudinary.com/dx9zlffut/image/upload/v1779680173/IMG_2062_1_li8tou.jpg" },
-  { name: "Dr. Disha", role: "Paediatrician & Neonatologist", image: "https://res.cloudinary.com/dx9zlffut/image/upload/v1779680173/IMG_2062_1_li8tou.jpg" },
-  { name: "Dr. Kishlay", role: "Hypercarnivore Metabolic Doctor", image: "https://res.cloudinary.com/dx9zlffut/image/upload/v1779680173/IMG_2062_1_li8tou.jpg" },
-  { name: "Dr. Shuba Dharmana", role: "Cosmetic Dermatologist", image: "https://res.cloudinary.com/dx9zlffut/image/upload/v1779680173/IMG_2062_1_li8tou.jpg" },
-  { name: "Dr. Devendra Dangar", role: "Pediatrician & Neonatologist", image: "https://res.cloudinary.com/dx9zlffut/image/upload/v1779680173/IMG_2062_1_li8tou.jpg" },
-  { name: "Dr. Poonam Dholakia", role: "Periodontist", image: "https://res.cloudinary.com/dx9zlffut/image/upload/v1779680173/IMG_2062_1_li8tou.jpg" },
-  { name: "Dr. Janki Bavishi", role: "IVF Specialist", image: "https://res.cloudinary.com/dx9zlffut/image/upload/v1779680173/IMG_2062_1_li8tou.jpg" },
-  { name: "Dr. Mitali Srivastava", role: "Sexologist", image: "https://res.cloudinary.com/dx9zlffut/image/upload/v1779680173/IMG_2062_1_li8tou.jpg" },
+  { name: "Dr. Shayoni Patel", role: "Orthodontist", image: "/doctors/dr1.jpg" },
+  { name: "Dr. Kishlay", role: "Hypercarnivore Metabolic Doctor", image: "/doctors/dr2.jpg" },
+  { name: "Dr. Disha", role: "Paediatrician & Neonatologist", image: "/doctors/dr3.webp" },
+  { name: "Dr. Kunjan Joshi", role: "Periodontist", image: "/doctors/dr4.webp" },
+  { name: "Dr. Mitali Srivastava", role: "Sexologist", image: "/doctors/dr5.webp" },
+  { name: "Dr. Janki Bavishi", role: "IVF Specialist", image: "/doctors/dr6.webp" },
+  { name: "Dr. Shuba Dharmana", role: "Cosmetic Dermatologist & Hair Transplant Surgeon", image: "/doctors/dr7.webp" },
+  { name: "Dr. Devendra Dangar", role: "Pediatrician & Neonatologist", image: "/doctors/dr8.webp" },
+  { name: "Dr. Poonam Dholakia", role: "Periodontist", image: "/doctors/dr9.webp" },
 ];
 
 export default function HealthcareGuests() {
@@ -86,8 +86,11 @@ export default function HealthcareGuests() {
           {/* Slides */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {displayDocs.map((doc, i) => (
-              <div key={`${doc.name}-${i}`} className="flex flex-col items-center">
-                <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden">
+              <div
+                key={`${doc.name}-${i}`}
+                className="group flex flex-col items-center cursor-pointer transition-all duration-300 hover:-translate-y-4"
+              >
+                <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden ring-2 ring-transparent group-hover:ring-yellow-400 transition-all duration-300 shadow-lg group-hover:shadow-yellow-400/30 group-hover:shadow-2xl">
                   <Image
                     src={doc.image}
                     alt={doc.name}
@@ -96,10 +99,12 @@ export default function HealthcareGuests() {
                     sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
-                <h3 className="mt-5 text-lg md:text-xl font-bold text-white font-headline text-center">
+                <h3 className="mt-5 text-lg md:text-xl font-bold font-headline text-center text-white group-hover:text-yellow-400 transition-colors duration-300">
                   {doc.name}
                 </h3>
-                <p className="text-white/50 font-accent text-sm mt-1 text-center">{doc.role}</p>
+                <p className="text-white/50 font-accent text-sm mt-1 text-center group-hover:text-yellow-400/70 transition-colors duration-300">
+                  {doc.role}
+                </p>
               </div>
             ))}
           </div>
