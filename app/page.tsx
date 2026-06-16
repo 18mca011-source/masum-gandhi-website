@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import GuestsFrom from "./components/GuestsFrom";
 import CoreOffering from "./components/CoreOffering";
 import HealthcareGuests from "./components/HealthcareGuests";
 import ProductionTeam from "./components/ProductionTeam";
@@ -19,6 +20,7 @@ export default function Home() {
       <main className="flex-grow overflow-x-hidden">
         <Hero />
         <About />
+        <GuestsFrom />
         <CoreOffering />
         <HealthcareGuests />
         <ProductionTeam />
