@@ -60,36 +60,37 @@ export default function FAQ() {
           <div className="inline-block p-4 bg-white/5 rounded-2xl ring-1 ring-white/10 backdrop-blur-sm mb-6">
             <CircleHelp className="h-10 w-10 text-yellow-400" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-headline text-white font-bold">
-            Everything you need to know
+          <h2 className="text-4xl md:text-5xl font-headline font-bold text-white">
+            Everything you need to <span className="text-yellow-400">know</span>
           </h2>
           <p className="mt-2 max-w-xl mx-auto text-lg text-white/70 font-accent">
             Your questions about becoming a guest, answered.
           </p>
         </div>
 
-        <div className="mt-16 max-w-4xl mx-auto">
+        <div className="mt-10 max-w-4xl mx-auto space-y-3">
           {faqs.map((faq, i) => (
-            <div key={i} className="border-b glassmorphic rounded-lg mb-4 px-6"
-              style={{ borderColor: "rgba(255,255,255,0.1)" }}
+            <div
+              key={i}
+              className="bg-white/5 border border-white/10 rounded-2xl px-6 overflow-hidden"
             >
               <button
-                className="flex flex-1 items-center justify-between py-4 font-medium transition-all text-lg font-headline text-yellow-400 text-left hover:no-underline w-full"
+                className="flex items-center justify-between w-full py-5 text-left"
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 aria-expanded={openIndex === i}
               >
-                <span className="text-white hover:text-yellow-400 transition-colors text-left">
+                <span className="text-yellow-400 font-headline font-medium text-base md:text-lg pr-4">
                   {faq.question}
                 </span>
                 <ChevronDown
-                  className={`h-4 w-4 shrink-0 transition-transform duration-200 text-yellow-400 ml-4 ${
+                  className={`h-5 w-5 shrink-0 text-yellow-400 transition-transform duration-300 ${
                     openIndex === i ? "rotate-180" : ""
                   }`}
                 />
               </button>
               {openIndex === i && (
-                <div className="overflow-hidden text-sm transition-all pb-4">
-                  <p className="text-white/70 font-accent leading-relaxed">{faq.answer}</p>
+                <div className="pb-5">
+                  <p className="text-white/70 font-accent text-sm leading-relaxed">{faq.answer}</p>
                 </div>
               )}
             </div>
