@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
@@ -10,90 +10,90 @@ interface Guest {
 }
 
 const guests: Guest[] = [
-  {
-    name: "Jigar Daryanani",
-    role: "Relationship Coach",
-    image: "https://res.cloudinary.com/dx9zlffut/image/upload/v1779680173/IMG_2062_1_li8tou.jpg",
-  },
-  {
-    name: "Priyanka Dalal",
-    role: "Sports Performance Coach, Founder: High5 Performance",
-    image: "https://res.cloudinary.com/dx9zlffut/image/upload/v1779680173/IMG_2062_1_li8tou.jpg",
-  },
-  {
-    name: "Vatsal Kamdar",
-    role: "Business Director, Kautilya Group",
-    image: "https://res.cloudinary.com/dx9zlffut/image/upload/v1779680173/IMG_2062_1_li8tou.jpg",
-  },
-  {
-    name: "Dr. Jwalant Chag",
-    role: "Psychiatrist, Founder: Elegant Minds Hospital",
-    image: "https://res.cloudinary.com/dx9zlffut/image/upload/v1779680173/IMG_2062_1_li8tou.jpg",
-  },
-  {
-    name: "Chitrak Shah",
-    role: "Co-Founder & MD, Shivalik Group",
-    image: "https://res.cloudinary.com/dx9zlffut/image/upload/v1779680173/IMG_2062_1_li8tou.jpg",
-  },
-  {
-    name: "Aditi Kulkarni",
-    role: "Founder: Yuvana Wellness",
-    image: "https://res.cloudinary.com/dx9zlffut/image/upload/v1779680173/IMG_2062_1_li8tou.jpg",
-  },
-  {
-    name: "Thangvel Nadar",
-    role: "Founder: Idli Point",
-    image: "https://res.cloudinary.com/dx9zlffut/image/upload/v1779680173/IMG_2062_1_li8tou.jpg",
-  },
-  {
-    name: "Vrishali Mulay",
-    role: "Founder: Regatta HR Services",
-    image: "https://res.cloudinary.com/dx9zlffut/image/upload/v1779680173/IMG_2062_1_li8tou.jpg",
-  },
+  { name: "Niharika & Meshwa Patel", role: "Founders, Patel Group", image: "/guests/Niharika & Meshwa Patel.webp" },
+  { name: "Priyanka Dalal", role: "Sports Performance Coach, Founder: High5 Performance", image: "/guests/Priyanka Dalal.webp" },
+  { name: "Jigar Daryani", role: "Relationship Coach", image: "/guests/Jigar Daryani.webp" },
+  { name: "Ravi Shah", role: "Entrepreneur & Business Leader", image: "/guests/Ravi Shah.webp" },
+  { name: "Vabez", role: "Artist & Creator", image: "/guests/Vabez.webp" },
+  { name: "Anuja Kamdar", role: "Founder, Kamdar Group", image: "/guests/Anuja Kamdar.webp" },
+  { name: "Aditi Kulkarni", role: "Founder: Yuvana Wellness", image: "/guests/Aditi Kulkarni.webp" },
+  { name: "Chitrak Shah", role: "Co-Founder & MD, Shivalik Group", image: "/guests/Chitrak Shah.webp" },
+  { name: "Thangvel Nadar", role: "Founder: Idli Point", image: "/guests/Thangvel Nadar.webp" },
+  { name: "Vrishali Mulay", role: "Founder: Regatta HR Services", image: "/guests/Vrishali Mulay.webp" },
+  { name: "Kkaran & Chahhat Soni", role: "Entrepreneurs & Founders", image: "/guests/Kkaran & Chahhat Soni.webp" },
+  { name: "Dr. Jwalant Chag", role: "Psychiatrist, Founder: Elegant Minds Hospital", image: "/guests/Jwalant Chag.webp" },
+  { name: "Malti Sharma", role: "Business Leader & Mentor", image: "/guests/Malti Sharma.webp" },
+  { name: "Vatsal Kamdar", role: "Business Director, Kautilya Group", image: "/guests/Vatsal Kamdar.webp" },
 ];
 
 export default function GuestCarousel({ title }: { title: string }) {
-  const [index, setIndex] = useState(0);
-  const perPage = 3;
-  const maxIndex = Math.max(0, guests.length - perPage);
+  const [current, setCurrent] = useState(0);
+  const [perPage, setPerPage] = useState(3);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  const prev = () => setIndex((i) => Math.max(0, i - 1));
-  const next = () => setIndex((i) => Math.min(maxIndex, i + 1));
+  useEffect(() => {
+    const update = () => setPerPage(window.innerWidth >= 768 ? 3 : 1);
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
 
-  const visible = guests.slice(index, index + perPage);
+  const total = guests.length;
+  const maxIndex = total - perPage;
+
+  const next = () => setCurrent((c) => (c >= maxIndex ? 0 : c + 1));
+  const prev = () => setCurrent((c) => (c <= 0 ? maxIndex : c - 1));
+
+  useEffect(() => {
+    timerRef.current = setInterval(next, 3000);
+    return () => { if (timerRef.current) clearInterval(timerRef.current); };
+  }, [perPage, maxIndex]);
+
+  const resetTimer = () => {
+    if (timerRef.current) clearInterval(timerRef.current);
+    timerRef.current = setInterval(next, 3000);
+  };
+
+  const handlePrev = () => { prev(); resetTimer(); };
+  const handleNext = () => { next(); resetTimer(); };
+
+  const visible = guests.slice(current, current + perPage);
+  const displayGuests = visible.length < perPage
+    ? [...visible, ...guests.slice(0, perPage - visible.length)]
+    : visible;
 
   return (
     <div className="relative w-full max-w-6xl mx-auto">
       <div className="text-center mb-10 md:mb-16">
         <h2 className="text-3xl md:text-5xl font-headline text-white font-bold">{title}</h2>
+        <div className="w-24 h-1 rounded-full bg-gradient-to-r from-yellow-400 to-purple-600 mx-auto mt-4" />
       </div>
 
       <div className="relative">
         {/* Prev button */}
         <button
-          onClick={prev}
-          disabled={index === 0}
+          onClick={handlePrev}
           aria-label="Previous slide"
-          className="absolute -left-12 top-1/2 -translate-y-1/2 hidden xl:flex items-center justify-center h-8 w-8 rounded-full border border-white/20 bg-[#101010] hover:bg-white/10 transition-colors disabled:opacity-30"
+          className="absolute -left-5 md:-left-12 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center h-10 w-10 rounded-full border border-white/20 bg-[#101010] hover:bg-white/10 transition-colors"
         >
-          <ChevronLeft className="h-4 w-4 text-white" />
+          <ChevronLeft className="h-5 w-5 text-white" />
         </button>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {visible.map((guest) => (
-            <div key={guest.name} className="group block">
-              <div className="border text-card-foreground shadow-sm overflow-hidden rounded-2xl border-white/10 bg-white/5 transition-all duration-300 group-hover:border-yellow-400/50 group-hover:shadow-lg group-hover:shadow-yellow-400/20 group-hover:-translate-y-1">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {displayGuests.map((guest, i) => (
+            <div key={`${guest.name}-${i}`} className="group block">
+              <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/5 transition-all duration-300 group-hover:border-yellow-400/50 group-hover:shadow-lg group-hover:shadow-yellow-400/20 group-hover:-translate-y-2">
                 <div className="relative aspect-square w-full overflow-hidden">
                   <Image
                     src={guest.image}
                     alt={guest.name}
                     fill
-                    className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
                 <div className="p-4">
-                  <h3 className="mt-4 text-lg font-bold text-white font-headline group-hover:text-yellow-400 transition-colors">
+                  <h3 className="text-lg font-bold text-white font-headline group-hover:text-yellow-400 transition-colors">
                     {guest.name}
                   </h3>
                   <p className="text-white/60 font-accent text-sm mt-1">{guest.role}</p>
@@ -105,36 +105,25 @@ export default function GuestCarousel({ title }: { title: string }) {
 
         {/* Next button */}
         <button
-          onClick={next}
-          disabled={index >= maxIndex}
+          onClick={handleNext}
           aria-label="Next slide"
-          className="absolute -right-12 top-1/2 -translate-y-1/2 hidden xl:flex items-center justify-center h-8 w-8 rounded-full border border-white/20 bg-[#101010] hover:bg-white/10 transition-colors disabled:opacity-30"
+          className="absolute -right-5 md:-right-12 top-1/2 -translate-y-1/2 z-10 flex items-center justify-center h-10 w-10 rounded-full border border-white/20 bg-[#101010] hover:bg-white/10 transition-colors"
         >
-          <ChevronRight className="h-4 w-4 text-white" />
+          <ChevronRight className="h-5 w-5 text-white" />
         </button>
       </div>
 
-      {/* Mobile nav */}
-      <div className="flex items-center justify-center gap-4 mt-8 xl:hidden">
-        <button
-          onClick={prev}
-          disabled={index === 0}
-          aria-label="Previous"
-          className="flex items-center justify-center h-10 w-10 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 transition-colors disabled:opacity-30"
-        >
-          <ChevronLeft className="h-4 w-4 text-white" />
-        </button>
-        <span className="text-white/40 font-accent text-sm">
-          {index + 1} / {maxIndex + 1}
-        </span>
-        <button
-          onClick={next}
-          disabled={index >= maxIndex}
-          aria-label="Next"
-          className="flex items-center justify-center h-10 w-10 rounded-full border border-white/20 bg-white/5 hover:bg-white/10 transition-colors disabled:opacity-30"
-        >
-          <ChevronRight className="h-4 w-4 text-white" />
-        </button>
+      {/* Dots */}
+      <div className="flex items-center justify-center gap-2 mt-8">
+        {Array.from({ length: maxIndex + 1 }).map((_, i) => (
+          <button
+            key={i}
+            onClick={() => { setCurrent(i); resetTimer(); }}
+            className={`h-2 rounded-full transition-all duration-300 ${
+              i === current ? "bg-yellow-400 w-6" : "bg-white/30 w-2"
+            }`}
+          />
+        ))}
       </div>
     </div>
   );
