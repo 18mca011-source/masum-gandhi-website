@@ -74,29 +74,29 @@ export default function HealthcareGuests() {
 
         {/* Carousel */}
         <div className="relative mt-12">
-          {/* Prev button */}
+          {/* Prev button — mobile only */}
           <button
             onClick={handlePrev}
             aria-label="Previous"
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-8 z-10 flex items-center justify-center w-10 h-10 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition-colors"
+            className="md:hidden absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 flex items-center justify-center w-10 h-10 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition-colors"
           >
             <ChevronLeft className="w-5 h-5 text-white" />
           </button>
 
           {/* Slides */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {displayDocs.map((doc, i) => (
               <div
                 key={`${doc.name}-${i}`}
                 className="group flex flex-col items-center cursor-pointer transition-all duration-300 hover:-translate-y-4"
               >
-                <div className="relative w-full max-w-[300px] mx-auto h-[280px] md:h-[340px] rounded-2xl overflow-hidden ring-2 ring-transparent group-hover:ring-yellow-400 transition-all duration-300 shadow-lg group-hover:shadow-yellow-400/30 group-hover:shadow-2xl">
+                <div className="relative w-full max-w-[320px] md:max-w-none mx-auto aspect-square md:aspect-[4/5] rounded-2xl overflow-hidden ring-2 ring-transparent group-hover:ring-yellow-400 transition-all duration-300 shadow-lg group-hover:shadow-yellow-400/30 group-hover:shadow-2xl">
                   <Image
                     src={doc.image}
                     alt={doc.name}
                     fill
                     className="object-cover object-center"
-                    sizes="(max-width: 768px) 320px, 320px"
+                    sizes="(max-width: 768px) 320px, 33vw"
                   />
                 </div>
                 <h3 className="mt-4 text-base md:text-lg font-bold font-headline text-center text-white group-hover:text-yellow-400 transition-colors duration-300">
@@ -109,11 +109,11 @@ export default function HealthcareGuests() {
             ))}
           </div>
 
-          {/* Next button */}
+          {/* Next button — mobile only */}
           <button
             onClick={handleNext}
             aria-label="Next"
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-8 z-10 flex items-center justify-center w-10 h-10 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition-colors"
+            className="md:hidden absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 flex items-center justify-center w-10 h-10 rounded-full bg-white/10 border border-white/20 hover:bg-white/20 transition-colors"
           >
             <ChevronRight className="w-5 h-5 text-white" />
           </button>
