@@ -12,7 +12,6 @@ interface Guest {
 const guests: Guest[] = [
   { name: "Niharika & Meshwa Patel", role: "Founders, Patel Group", image: "/guests/Niharika & Meshwa Patel.webp" },
   { name: "Priyanka Dalal", role: "Sports Performance Coach, Founder: High5 Performance", image: "/guests/Priyanka Dalal.webp" },
-  { name: "Jigar Daryani", role: "Relationship Coach", image: "/guests/Jigar Daryani.webp" },
   { name: "Ravi Shah", role: "Entrepreneur & Business Leader", image: "/guests/Ravi Shah.webp" },
   { name: "Vabez", role: "Artist & Creator", image: "/guests/Vabez.webp" },
   { name: "Anuja Kamdar", role: "Founder, Kamdar Group", image: "/guests/Anuja Kamdar.webp" },
