@@ -8,7 +8,7 @@ const episodes = [
     views: "20k",
     badge: "Most Viewed",
     thumbnail: "/episodes/ep3-thumbnail.webp",
-    link: "https://www.youtube.com/watch?v=yXKNMne4Y0g",
+    link: "https://www.youtube.com/watch?v=taLQcWPPAQQ",
   },
   {
     title: "Veg Diet is a Scam! End of Veg vs Non-Veg Diet | Dr. Kishlay | Masum Gandhi",
@@ -17,7 +17,7 @@ const episodes = [
     views: "12k",
     badge: "Recent Viral",
     thumbnail: "/episodes/ep1-thumbnail.jpg",
-    link: "https://www.youtube.com/watch?v=m8H3HoZHFGc",
+    link: "https://www.youtube.com/watch?v=DFhA3l8wIFk",
   },
   {
     title: "Salon ki Sacchai: Scams, Expired Products, Staff Betrayal & Fake Discounts",
@@ -26,7 +26,7 @@ const episodes = [
     views: "8k",
     badge: "Industry Truths",
     thumbnail: "/episodes/ep2-thumbnail.webp",
-    link: "https://www.youtube.com/watch?v=RkQTqCBBMKU",
+    link: "https://www.youtube.com/watch?v=ud6UaD2PFBA",
   },
 ];
 
