@@ -3,7 +3,7 @@ import { CalendarDays, Mic, Film, Users } from "lucide-react";
 const benefits = [
   { icon: <Mic className="w-5 h-5 text-yellow-400" />, label: "Professional Studio" },
   { icon: <Film className="w-5 h-5 text-yellow-400" />, label: "Expert Production" },
-  { icon: <Users className="w-5 h-5 text-yellow-400" />, label: "44k+ Reach" },
+  { icon: <Users className="w-5 h-5 text-yellow-400" />, label: "52k+ Reach" },
 ];
 
 export default function CTA() {
@@ -50,7 +50,7 @@ export default function CTA() {
           </div>
 
           <p className="mt-6 text-white/40 font-accent text-sm">
-            Join 80+ industry leaders who&apos;ve shared their journey · 44k+ community
+            Join 80+ industry leaders who&apos;ve shared their journey · 52k+ community
           </p>
         </div>
       </div>

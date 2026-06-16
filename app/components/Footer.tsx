@@ -75,7 +75,7 @@ export default function Footer() {
                   </span>
                 </div>
                 <p className="text-white/60 font-accent text-sm leading-relaxed max-w-sm">
-                  Where visionary conversations happen. Join our community of 44k+ listeners and be
+                  Where visionary conversations happen. Join our community of 52k+ listeners and be
                   part of inspiring discussions with CEOs, investors, and creators.
                 </p>
               </div>

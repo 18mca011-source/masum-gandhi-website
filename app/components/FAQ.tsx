@@ -21,7 +21,7 @@ const faqs = [
   {
     question: "What will I personally gain from being on the podcast?",
     answer:
-      "You'll gain massive brand exposure, a professionally produced video you can use in your marketing, credibility as a thought leader, and access to our 44k+ community of entrepreneurs, investors, and business professionals.",
+      "You'll gain massive brand exposure, a professionally produced video you can use in your marketing, credibility as a thought leader, and access to our 52k+ community of entrepreneurs, investors, and business professionals.",
   },
   {
     question: "What kind of reach can my episode get?",
@@ -54,7 +54,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-16 md:py-24 bg-[#101010]">
+    <section className="py-10 md:py-16 bg-[#101010]">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
           <div className="inline-block p-4 bg-white/5 rounded-2xl ring-1 ring-white/10 backdrop-blur-sm mb-6">

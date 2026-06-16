@@ -34,13 +34,13 @@ const steps = [
     icon: <Headphones className="w-6 h-6 text-yellow-400" />,
     title: "Strategic Promotion",
     description:
-      "Amplify your message across our 44k+ community and beyond.",
+      "Amplify your message across our 52k+ community and beyond.",
   },
 ];
 
 export default function GuestJourney() {
   return (
-    <section className="py-16 md:py-24 bg-[#101010] relative overflow-hidden">
+    <section className="py-10 md:py-16 bg-[#101010] relative overflow-hidden">
       <div className="absolute top-0 left-0 w-96 h-96 bg-yellow-400/20 blur-[150px] rounded-full -z-10" />
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-600/20 blur-[180px] rounded-full -z-10" />
 

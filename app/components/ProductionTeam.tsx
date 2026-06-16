@@ -26,7 +26,7 @@ const team = [
 export default function ProductionTeam() {
   return (
     <section
-      className="py-16 md:py-24 bg-[#111] relative overflow-hidden"
+      className="py-10 md:py-16 bg-[#111] relative overflow-hidden"
       style={{
         backgroundImage:
           "radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px)",
