@@ -84,22 +84,22 @@ export default function HealthcareGuests() {
           </button>
 
           {/* Slides */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4 md:px-8">
             {displayDocs.map((doc, i) => (
               <div
                 key={`${doc.name}-${i}`}
                 className="group flex flex-col items-center cursor-pointer transition-all duration-300 hover:-translate-y-4"
               >
-                <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden ring-2 ring-transparent group-hover:ring-yellow-400 transition-all duration-300 shadow-lg group-hover:shadow-yellow-400/30 group-hover:shadow-2xl">
+                <div className="relative w-full max-w-[300px] mx-auto h-[280px] md:h-[340px] rounded-2xl overflow-hidden ring-2 ring-transparent group-hover:ring-yellow-400 transition-all duration-300 shadow-lg group-hover:shadow-yellow-400/30 group-hover:shadow-2xl">
                   <Image
                     src={doc.image}
                     alt={doc.name}
                     fill
-                    className="object-cover object-top"
-                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover object-center"
+                    sizes="(max-width: 768px) 320px, 320px"
                   />
                 </div>
-                <h3 className="mt-5 text-lg md:text-xl font-bold font-headline text-center text-white group-hover:text-yellow-400 transition-colors duration-300">
+                <h3 className="mt-4 text-base md:text-lg font-bold font-headline text-center text-white group-hover:text-yellow-400 transition-colors duration-300">
                   {doc.name}
                 </h3>
                 <p className="text-white/50 font-accent text-sm mt-1 text-center group-hover:text-yellow-400/70 transition-colors duration-300">
