@@ -7,7 +7,7 @@ const episodes = [
     guestRole: "Founder - Idli Point",
     views: "20k",
     badge: "Most Viewed",
-    thumbnail: "/episodes/ep1-thumbnail.jpg",
+    thumbnail: "/episodes/ep3-thumbnail.webp",
     link: "https://www.youtube.com/watch?v=yXKNMne4Y0g",
   },
   {
@@ -16,7 +16,7 @@ const episodes = [
     guestRole: "Hypercarnivore Metabolic Doctor",
     views: "12k",
     badge: "Recent Viral",
-    thumbnail: "/episodes/ep2-thumbnail.webp",
+    thumbnail: "/episodes/ep1-thumbnail.jpg",
     link: "https://www.youtube.com/watch?v=m8H3HoZHFGc",
   },
   {
@@ -25,7 +25,7 @@ const episodes = [
     guestRole: "Founder - Sam's Salon",
     views: "8k",
     badge: "Industry Truths",
-    thumbnail: "/episodes/ep3-thumbnail.webp",
+    thumbnail: "/episodes/ep2-thumbnail.webp",
     link: "https://www.youtube.com/watch?v=RkQTqCBBMKU",
   },
 ];
