@@ -46,7 +46,7 @@ export default function Hero() {
         {/* CTA Buttons */}
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           <a
-            href="#be-a-guest"
+            href="https://calendly.com/masumgandhi/30min" target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 whitespace-nowrap h-11 font-bold text-white bg-gradient-to-r from-yellow-400 to-purple-600 rounded-lg font-accent px-8 py-6 text-lg hover:scale-105 transition-transform"
           >
             Be a Guest
