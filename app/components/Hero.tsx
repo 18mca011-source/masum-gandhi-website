@@ -52,7 +52,7 @@ export default function Hero() {
             Be a Guest
           </a>
           <a
-            href="https://www.youtube.com/@MasumGandhi"
+            href="https://www.youtube.com/@masumngandhi"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 whitespace-nowrap h-11 font-bold border border-white/20 text-white bg-white/5 rounded-lg font-accent px-8 py-6 text-lg hover:scale-105 transition-transform hover:border-yellow-400/50"
