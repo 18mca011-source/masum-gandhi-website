@@ -1,10 +1,10 @@
 import { Mic, Sparkles, TrendingUp, View } from "lucide-react";
 
 const stats = [
-  { icon: <Mic className="w-4 h-4 md:w-6 md:h-6 text-white/50" />, value: "80+", label: "Podcasts hosted" },
-  { icon: <TrendingUp className="w-4 h-4 md:w-6 md:h-6 text-white/50" />, value: "10M+", label: "Overall social media views" },
-  { icon: <Sparkles className="w-4 h-4 md:w-6 md:h-6 text-white/50" />, value: "Every Sat", label: "New episodes" },
-  { icon: <View className="w-4 h-4 md:w-6 md:h-6 text-white/50" />, value: "44k+", label: "Community" },
+  { icon: <Mic className="w-4 h-4 md:w-5 md:h-5 text-white/40" />, sup: "HOST OF", value: "80+", sub: "Podcasts" },
+  { icon: <View className="w-4 h-4 md:w-5 md:h-5 text-white/40" />, sup: "OVERALL SOCIAL MEDIA", value: "10M+", sub: "Views" },
+  { icon: <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-white/40" />, sup: "NEW EPISODE EVERY", value: "Saturday", sub: "" },
+  { icon: <TrendingUp className="w-4 h-4 md:w-5 md:h-5 text-white/40" />, sup: "COMMUNITY", value: "44k+", sub: "IG · YT · Linkedin" },
 ];
 
 export default function Hero() {
@@ -66,14 +66,14 @@ export default function Hero() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {stats.map((stat) => (
               <div
-                key={stat.label}
-                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-white/80 transition-all duration-300 hover:border-yellow-400/50 hover:shadow-yellow-400/10 hover:-translate-y-1"
+                key={stat.sup}
+                className="flex flex-col px-5 py-5 rounded-2xl bg-white/5 border border-white/10 text-left transition-all duration-300 hover:border-yellow-400/20 hover:-translate-y-1"
               >
-                {stat.icon}
-                <div className="text-left">
-                  <div className="font-bold text-white font-headline">{stat.value}</div>
-                  <div className="text-[10px] md:text-sm text-white/70 mt-0.5 font-accent">{stat.label}</div>
+                <div className="flex items-center gap-2 text-white/40 text-[10px] uppercase tracking-widest font-accent mb-3">
+                  {stat.icon} {stat.sup}
                 </div>
+                <div className="text-yellow-400 font-headline font-bold text-3xl md:text-4xl leading-none">{stat.value}</div>
+                {stat.sub && <div className="text-white/50 font-accent text-sm mt-2">{stat.sub}</div>}
               </div>
             ))}
           </div>
