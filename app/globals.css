@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 6%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 100%;
+    --primary: 48 96% 53%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 271 81% 56%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 271 81% 56%;
+    --accent-foreground: 0 0% 100%;
+    --ring: 48 96% 53%;
+    --radius: 0.5rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #101010;
+    color: white;
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-headline {
+    font-family: "Montserrat", sans-serif;
+  }
+  .font-body {
+    font-family: "Inter", sans-serif;
+  }
+  .font-accent {
+    font-family: "Inter", sans-serif;
+  }
+  .glassmorphic {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .gradient-text {
+    background: linear-gradient(to right, #facc15, #9333ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .text-gradient {
+    background: linear-gradient(to right, #facc15, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Carousel */
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+/* Accordion */
+[data-state="open"] > .accordion-chevron {
+  transform: rotate(180deg);
+}
