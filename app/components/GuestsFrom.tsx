@@ -29,7 +29,7 @@ export default function GuestsFrom() {
               className="flex items-center gap-4 px-5 py-6 rounded-2xl bg-white/5 border border-white/10 hover:border-yellow-400/20 transition-all duration-300"
             >
               <span className="text-3xl md:text-4xl flex-shrink-0">{cat.emoji}</span>
-              <span className="font-headline font-bold text-white text-base md:text-lg leading-snug whitespace-pre-line">
+              <span className="font-headline font-bold text-white text-sm md:text-lg leading-snug whitespace-pre-line">
                 {cat.label}
               </span>
             </div>
