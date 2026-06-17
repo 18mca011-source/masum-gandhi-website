@@ -39,7 +39,7 @@ export default function About() {
                 shaping the future of business across India.
               </p>
               <p>
-                Through <strong className="text-white">80+ conversations</strong> and counting, I&apos;ve built
+                Through <strong className="text-white">90+ conversations</strong> and counting, I&apos;ve built
                 a platform focused on uncovering the real stories behind success; the struggles, pivots, lessons,
                 and defining moments people rarely talk about.
               </p>
