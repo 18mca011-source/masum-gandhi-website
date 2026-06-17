@@ -1,7 +1,7 @@
 import { Mic, Sparkles, TrendingUp, View } from "lucide-react";
 
 const stats = [
-  { icon: <Mic className="w-4 h-4 md:w-5 md:h-5 text-white/40" />, sup: "HOST OF", value: "80+", sub: "Podcasts" },
+  { icon: <Mic className="w-4 h-4 md:w-5 md:h-5 text-white/40" />, sup: "COMPLETED", value: "90+", sub: "Podcasts" },
   { icon: <View className="w-4 h-4 md:w-5 md:h-5 text-white/40" />, sup: "OVERALL SOCIAL MEDIA", value: "10M+", sub: "Views" },
   { icon: <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-white/40" />, sup: "NEW EPISODE EVERY", value: "Saturday", sub: "" },
   { icon: <TrendingUp className="w-4 h-4 md:w-5 md:h-5 text-white/40" />, sup: "COMMUNITY", value: "52k+", sub: "IG · YT · Linkedin" },
