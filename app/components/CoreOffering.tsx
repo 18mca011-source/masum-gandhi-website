@@ -73,13 +73,6 @@ export default function CoreOffering() {
 
         </div>
 
-        {/* Centered callout text below */}
-        <p className="mt-16 max-w-3xl mx-auto text-center text-white/80 font-accent font-bold text-base md:text-lg leading-relaxed">
-          Whether you are an expert, a business owner, or a professional looking to build your presence,
-          Masum Gandhi Podcast gives you the platform, the audience, and the narrative to stand out. It
-          helps you share your story, establish authority, and position yourself as a trusted voice in
-          your industry.
-        </p>
 
       </div>
     </section>
