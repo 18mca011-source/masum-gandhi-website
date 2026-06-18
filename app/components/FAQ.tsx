@@ -46,7 +46,7 @@ const faqs = [
   {
     question: "Can I see examples of past episodes or guests?",
     answer:
-      "Absolutely! Visit our YouTube channel to browse all 80+ episodes and see the quality and variety of conversations we've hosted. You can also check out our featured guests section on this page.",
+      "Absolutely! Visit our YouTube channel to browse all 90+ episodes and see the quality and variety of conversations we've hosted. You can also check out our featured guests section on this page.",
   },
 ];
 

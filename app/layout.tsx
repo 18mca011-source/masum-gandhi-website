@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Masum Gandhi Podcast",
   description:
-    "India's first trigger-question based podcast with 80+ conversations featuring founders, healthcare experts, creators, and industry leaders across India.",
+    "India's first trigger-question based podcast with 90+ conversations featuring founders, healthcare experts, creators, and industry leaders across India.",
 };
 
 export default function RootLayout({

@@ -50,7 +50,7 @@ export default function CTA() {
           </div>
 
           <p className="mt-6 text-white/40 font-accent text-sm">
-            Join 80+ industry leaders who&apos;ve shared their journey · 52k+ community
+            Join 90+ industry leaders who&apos;ve shared their journey · 52k+ community
           </p>
         </div>
       </div>
