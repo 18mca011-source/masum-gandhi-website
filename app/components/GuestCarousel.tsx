@@ -10,18 +10,18 @@ interface Guest {
 }
 
 const guests: Guest[] = [
-  { name: "Niharika & Meshwa Patel", role: "Founders, Patel Group", image: "/guests/Niharika & Meshwa Patel.webp" },
+  { name: "Niharika & Meshwa Patel", role: "Founders: Rhythm Rumble", image: "/guests/Niharika & Meshwa Patel.webp" },
   { name: "Priyanka Dalal", role: "Sports Performance Coach, Founder: High5 Performance", image: "/guests/Priyanka Dalal.webp" },
-  { name: "Ravi Shah", role: "Entrepreneur & Business Leader", image: "/guests/Ravi Shah.webp" },
-  { name: "Vabez", role: "Artist & Creator", image: "/guests/Vabez.webp" },
-  { name: "Anuja Kamdar", role: "Founder, Kamdar Group", image: "/guests/Anuja Kamdar.webp" },
+  { name: "Ravi Shah", role: "Founder: Filmshoppee", image: "/guests/Ravi Shah.webp" },
+  { name: "Vabez", role: "Founder & Owner: Sam's Salon", image: "/guests/Vabez.webp" },
+  { name: "Anuja Kamdar", role: "Founder: Sinful Bites", image: "/guests/Anuja Kamdar.webp" },
   { name: "Aditi Kulkarni", role: "Founder: Yuvana Wellness", image: "/guests/Aditi Kulkarni.webp" },
   { name: "Chitrak Shah", role: "Co-Founder & MD, Shivalik Group", image: "/guests/Chitrak Shah.webp" },
   { name: "Thangvel Nadar", role: "Founder: Idli Point", image: "/guests/Thangvel Nadar.webp" },
   { name: "Vrishali Mulay", role: "Founder: Regatta HR Services", image: "/guests/Vrishali Mulay.webp" },
-  { name: "Kkaran & Chahhat Soni", role: "Entrepreneurs & Founders", image: "/guests/Kkaran & Chahhat Soni.webp" },
+  { name: "Kkaran & Chahhat Soni", role: "Founders: Paawsh", image: "/guests/Kkaran & Chahhat Soni.webp" },
   { name: "Dr. Jwalant Chag", role: "Psychiatrist, Founder: Elegant Minds Hospital", image: "/guests/Jwalant Chag.webp" },
-  { name: "Malti Sharma", role: "Business Leader & Mentor", image: "/guests/Malti Sharma.webp" },
+  { name: "Malti Sharma", role: "Environmental Artist and Entrepreneur", image: "/guests/Malti Sharma.webp" },
   { name: "Vatsal Kamdar", role: "Business Director, Kautilya Group", image: "/guests/Vatsal Kamdar.webp" },
 ];
 
