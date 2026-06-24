@@ -62,18 +62,18 @@ export default function Hero() {
         </div>
 
         {/* Stats */}
-        <div className="mt-12 md:mt-20 text-center max-w-4xl mx-auto px-4">
+        <div className="mt-12 md:mt-20 text-center max-w-5xl mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {stats.map((stat) => (
               <div
                 key={stat.sup}
                 className="flex flex-col px-3 sm:px-5 py-4 sm:py-5 rounded-2xl bg-white/5 border border-white/10 text-left transition-all duration-300 hover:border-yellow-400/20 hover:-translate-y-1 min-w-0"
               >
-                <div className="flex items-center gap-2 text-white/40 text-[9px] sm:text-[10px] uppercase tracking-widest font-accent mb-2 sm:mb-3">
+                <div className="flex items-center gap-2 text-white/40 text-[9px] sm:text-[10px] uppercase tracking-widest font-accent mb-2 sm:mb-3 whitespace-nowrap">
                   {stat.icon} {stat.sup}
                 </div>
-                <div className="text-yellow-400 font-headline font-bold text-xl sm:text-3xl md:text-4xl leading-none break-words">{stat.value}</div>
-                {stat.sub && <div className="text-white/50 font-accent text-xs sm:text-sm mt-2">{stat.sub}</div>}
+                <div className="text-yellow-400 font-headline font-bold text-xl sm:text-2xl md:text-3xl leading-none whitespace-nowrap">{stat.value}</div>
+                {stat.sub && <div className="text-white/50 font-accent text-xs sm:text-sm mt-2 whitespace-nowrap">{stat.sub}</div>}
               </div>
             ))}
           </div>
