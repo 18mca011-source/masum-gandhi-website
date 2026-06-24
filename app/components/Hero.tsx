@@ -72,7 +72,7 @@ export default function Hero() {
                 <div className="flex items-center gap-2 text-white/40 text-[10px] uppercase tracking-widest font-accent mb-3">
                   {stat.icon} {stat.sup}
                 </div>
-                <div className="text-yellow-400 font-headline font-bold text-3xl md:text-4xl leading-none">{stat.value}</div>
+                <div className="text-yellow-400 font-headline font-bold text-2xl sm:text-3xl md:text-4xl leading-none break-words">{stat.value}</div>
                 {stat.sub && <div className="text-white/50 font-accent text-sm mt-2">{stat.sub}</div>}
               </div>
             ))}
