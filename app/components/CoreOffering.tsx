@@ -17,13 +17,13 @@ const usps = [
     icon: <Video className="w-6 h-6 text-yellow-400" />,
     title: "High-End Production Quality",
     description:
-      "We work exclusively with industry-standard studio spaces featuring premium audio and video equipment — no compromises on quality.",
+      "We work exclusively with industry-standard studio spaces featuring premium audio and video equipment,no compromises on quality.",
   },
   {
     icon: <Search className="w-6 h-6 text-yellow-400" />,
     title: "Deep & Customised Research",
     description:
-      "Every guest's journey, achievements, business and industry is researched thoroughly before content is curated — creating meaningful conversations, not generic interviews.",
+      "Every guest's journey, achievements, business and industry is researched thoroughly before content is curated,creating meaningful conversations, not generic interviews.",
   },
   {
     icon: <TrendingUp className="w-6 h-6 text-yellow-400" />,
@@ -35,19 +35,19 @@ const usps = [
     icon: <ClipboardList className="w-6 h-6 text-yellow-400" />,
     title: "End-to-End Management",
     description:
-      "From research and content strategy to scheduling, production, post-production and delivery — our team handles everything so you focus only on the conversation.",
+      "From research and content strategy to scheduling, production, post-production and delivery,our team handles everything so you focus only on the conversation.",
   },
   {
     icon: <Globe className="w-6 h-6 text-yellow-400" />,
     title: "Pan-India Audience",
     description:
-      "Guests from across India mean viewership isn't limited to one region — our audience spans the nation with a growing international base too.",
+      "Guests from across India mean viewership isn't limited to one region,our audience spans the nation with a growing international base too.",
   },
   {
     icon: <Tag className="w-6 h-6 text-yellow-400" />,
     title: "Transparent Pricing",
     description:
-      "Guests are quoted only the final amount upfront — no hidden costs, no surprise add-ons. Straightforward and honest from day one.",
+      "Guests are quoted only the final amount upfront,no hidden costs, no surprise add-ons. Straightforward and honest from day one.",
   },
 ];
 
@@ -64,7 +64,7 @@ export default function CoreOffering() {
           </h2>
           <div className="w-24 h-1 rounded-full bg-gradient-to-r from-yellow-400 to-purple-600 mx-auto mt-4 mb-4" />
           <p className="max-w-2xl mx-auto text-white/60 font-accent text-base leading-relaxed">
-            A platform built for real stories, real credibility and real results — here's what makes every guest's experience exceptional.
+            A platform built for real stories, real credibility and real results,here's what makes every guest's experience exceptional.
           </p>
         </div>
 
