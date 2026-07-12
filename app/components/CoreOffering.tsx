@@ -1,16 +1,4 @@
-import {
-  Zap,
-  Users,
-  Video,
-  ClipboardList,
-  Search,
-  TrendingUp,
-  Globe,
-  Shield,
-  Star,
-  Network,
-  Tag,
-} from "lucide-react";
+import { Zap, Users, Video, ClipboardList, Search, TrendingUp, Globe, Tag } from "lucide-react";
 
 const usps = [
   {
@@ -32,12 +20,6 @@ const usps = [
       "We work exclusively with industry-standard studio spaces featuring premium audio and video equipment — no compromises on quality.",
   },
   {
-    icon: <ClipboardList className="w-6 h-6 text-yellow-400" />,
-    title: "End-to-End Management",
-    description:
-      "From research and content strategy to scheduling, production, post-production and delivery — our team handles everything so you focus only on the conversation.",
-  },
-  {
     icon: <Search className="w-6 h-6 text-yellow-400" />,
     title: "Deep & Customised Research",
     description:
@@ -50,28 +32,16 @@ const usps = [
       "We don't treat episodes as a one-time event. Our team thoughtfully repurposes content across multiple platforms to keep your visibility growing over time.",
   },
   {
+    icon: <ClipboardList className="w-6 h-6 text-yellow-400" />,
+    title: "End-to-End Management",
+    description:
+      "From research and content strategy to scheduling, production, post-production and delivery — our team handles everything so you focus only on the conversation.",
+  },
+  {
     icon: <Globe className="w-6 h-6 text-yellow-400" />,
     title: "Pan-India Audience",
     description:
       "Guests from across India mean viewership isn't limited to one region — our audience spans the nation with a growing international base too.",
-  },
-  {
-    icon: <Shield className="w-6 h-6 text-yellow-400" />,
-    title: "Quality Over Quantity",
-    description:
-      "We don't publish for the sake of numbers. Every episode is planned, researched and produced with the single objective of creating long-term value for the guest.",
-  },
-  {
-    icon: <Star className="w-6 h-6 text-yellow-400" />,
-    title: "Premium Guest Experience",
-    description:
-      "From the first conversation to final delivery, guests receive a structured, professional experience with dedicated coordination at every stage.",
-  },
-  {
-    icon: <Network className="w-6 h-6 text-yellow-400" />,
-    title: "Long-Term Professional Network",
-    description:
-      "Beyond the podcast, guests become part of a growing network of founders, doctors and industry leaders — creating opportunities for meaningful connections and collaborations.",
   },
   {
     icon: <Tag className="w-6 h-6 text-yellow-400" />,
@@ -99,7 +69,7 @@ export default function CoreOffering() {
         </div>
 
         {/* USP Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
           {usps.map((usp, i) => (
             <div
               key={usp.title}
