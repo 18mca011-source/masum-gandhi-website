@@ -41,7 +41,7 @@ const faqs = [
   {
     question: "Can small businesses afford your services?",
     answer:
-      "We have packages designed for businesses of all sizes. Please reach out to us at partnerships.masum@gmail.com to discuss options that fit your budget and goals.",
+      "We have packages designed for businesses of all sizes. Please reach out to us at connect.masumgandhi@gmail.com to discuss options that fit your budget and goals.",
   },
   {
     question: "Can I see examples of past episodes or guests?",

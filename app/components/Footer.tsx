@@ -118,11 +118,11 @@ export default function Footer() {
               <h3 className="text-lg font-semibold font-headline text-white mb-4">Contact</h3>
               <div className="space-y-3">
                 <a
-                  href="mailto:partnerships.masum@gmail.com"
+                  href="mailto:connect.masumgandhi@gmail.com"
                   className="flex items-center text-white/60 hover:text-yellow-400 transition-colors font-accent text-sm"
                 >
                   <Mail className="h-5 w-5 text-yellow-400 mr-3" />
-                  partnerships.masum@gmail.com
+                  connect.masumgandhi@gmail.com
                 </a>
                 <a
                   href="tel:+919773402508"
