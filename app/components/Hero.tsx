@@ -44,10 +44,6 @@ export default function Hero() {
           healthcare experts, creators, and industry leaders across India.
         </p>
 
-        <p className="mt-4 md:mt-6 max-w-2xl mx-auto text-base md:text-xl text-white/70 font-accent px-4 md:px-0">
-          Amongst Gujarat’s Top 5 Podcasts
-        </p>
-
         {/* CTA Buttons */}
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           <a
