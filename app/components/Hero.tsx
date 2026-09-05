@@ -25,7 +25,7 @@ export default function Hero() {
         {/* Badge */}
         <div className="flex items-center justify-center gap-2 text-sm font-medium text-white/60 font-accent mb-6">
           <span className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors bg-yellow-400/10 border-yellow-400/50 text-yellow-300 backdrop-blur-sm font-semibold">
-            <Sparkles className="w-3 h-3 mr-1" /> India&apos;s #1 Trigger-Question Podcast
+            <Sparkles className="w-3 h-3 mr-1" /> Amongst Gujarat’s Top 5 Podcasts
           </span>
         </div>
 
@@ -44,13 +44,9 @@ export default function Hero() {
           healthcare experts, creators, and industry leaders across India.
         </p>
 
-      <div className="relative z-10 container mx-auto px-4 md:px-6">
-        {/* Badge */}
-        <div className="flex items-center justify-center gap-2 text-sm font-medium text-white/60 font-accent mb-6">
-          <span className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs transition-colors bg-yellow-400/10 border-yellow-400/50 text-yellow-300 backdrop-blur-sm font-semibold">
-            <Sparkles className="w-3 h-3 mr-1" /> Amongst Gujarat’s Top 5 Podcasts.
-          </span>
-        </div>
+        <p className="mt-4 md:mt-6 max-w-2xl mx-auto text-base md:text-xl text-white/70 font-accent px-4 md:px-0">
+          Amongst Gujarat’s Top 5 Podcasts
+        </p>
 
         {/* CTA Buttons */}
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
