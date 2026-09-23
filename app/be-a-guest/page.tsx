@@ -77,7 +77,7 @@ export default function BeAGuestPage() {
 
   return (
     <>
-      <Navbar logoRed={true} />
+      <Navbar logoRed={false} />
       <main>
 
         {/* HERO */}
