@@ -77,8 +77,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" style={{ scrollBehavior: "smooth" }}>
-      <body className="font-body antialiased min-h-screen flex flex-col bg-[#101010] overflow-x-hidden">
+    <html lang="en" style={{ scrollBehavior: "smooth" }}>
+      <body className="font-body antialiased min-h-screen flex flex-col bg-white overflow-x-hidden">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
