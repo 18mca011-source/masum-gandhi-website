@@ -3,6 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Testimonials from "../components/Testimonials";
 
 const doctors = [
   { name: "Dr. Disha",           role: "Paediatrician & Neonatologist",       image: "/doctors/dr3.webp" },
@@ -256,6 +257,9 @@ export default function BeAGuestPage() {
             </div>
           </div>
         </section>
+
+        {/* Testimonials */}
+        <Testimonials />
 
         {/* CTA */}
         <div style={{ background: "#E8151B", padding: "56px 48px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 32, flexWrap: "wrap" as const }}>
