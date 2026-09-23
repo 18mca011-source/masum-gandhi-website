@@ -32,7 +32,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#be-a-guest"
+            href="/be-a-guest"
             className="text-[13px] font-bold text-white bg-primary uppercase tracking-widest px-5 py-2.5 rounded hover:bg-primary-dim transition-colors"
           >
             Be a Guest
@@ -63,7 +63,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#be-a-guest"
+            href="/be-a-guest"
             onClick={() => setOpen(false)}
             className="mt-3 text-center text-[13px] font-bold text-white bg-primary uppercase tracking-widest px-5 py-3 rounded"
           >
