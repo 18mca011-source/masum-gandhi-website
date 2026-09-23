@@ -46,8 +46,8 @@ export default function Footer({ dark = false }: { dark?: boolean }) {
           <div style={{ fontSize: 13, fontWeight: 700, fontStyle: "italic" as const, letterSpacing: "0.08em", color: "#E8151B", marginBottom: 16, textTransform: "uppercase" as const }}>Listen</div>
           <div style={{ display: "flex", flexDirection: "column" as const, gap: 12 }}>
             {[["YouTube","https://www.youtube.com/@masumngandhi"],["Instagram","https://www.instagram.com/masumgandhi_/"]].map(([label,href])=>(
-              <a key={label} href={href} target="_blank" rel="noopener noreferrer" style={{ color: "#aaa", fontSize: 15 }}
-                className="hover:text-[#E8151B] transition-colors">{label}</a>
+              <a key={label} href={href} target="_blank" rel="noopener noreferrer" style={{ fontSize: 15 }}
+                className="text-[#aaa] hover:text-[#E8151B] transition-colors">{label}</a>
             ))}
           </div>
         </div>
