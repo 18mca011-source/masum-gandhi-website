@@ -54,9 +54,7 @@ export default function Footer({ dark = false }: { dark?: boolean }) {
           <div style={{ fontSize: 13, fontWeight: 700, fontStyle: "italic" as const, letterSpacing: "0.08em", color: "#E8151B", marginBottom: 16, textTransform: "uppercase" as const }}>Follow</div>
           <div style={{ display: "flex", gap: 10, flexWrap: "wrap" as const, marginBottom: 24 }}>
             {[["YT","https://www.youtube.com/@masumngandhi"],["IG","https://www.instagram.com/masumgandhi_/"],["in","https://www.linkedin.com/in/masumgandhi/"],["X","https://x.com/masumgandhi_"]].map(([label,href])=>(
-              <a key={label} href={href} target="_blank" rel="noopener noreferrer"
-                style={{ width: 42, height: 42, borderRadius: "50%", background: "#E5E5E5", display: "flex", alignItems: "center", justifyContent: "center", color: "#888", textDecoration: "none", fontSize: 13 }}
-                className="hover:bg-[#E8151B] hover:text-black transition-colors">{label}</a>
+              <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="footer-social-btn">{label}</a>
             ))}
           </div>
           <div style={{ fontSize: 13, color: "#999" }}>Partnerships: <a href="mailto:connect.masumgandhi@gmail.com" style={{ color: "#E8151B" }}>connect.masumgandhi@gmail.com</a></div>
