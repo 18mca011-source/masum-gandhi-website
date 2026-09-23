@@ -10,7 +10,7 @@ export default function Footer({ dark = false }: { dark?: boolean }) {
           <div>
             <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase" as const, color: "#E8151B", fontStyle: "italic" as const, marginBottom: 16 }}>Listen</div>
             <div style={{ display: "flex", flexDirection: "column" as const, gap: 10 }}>
-              {[["Spotify","https://open.spotify.com/show/20CTgx38209p042nwCRyS8"],["YouTube","https://www.youtube.com/@masumngandhi"],["Instagram","https://www.instagram.com/masumgandhi_/"]].map(([label,href])=>(
+              {[["YouTube","https://www.youtube.com/@masumngandhi"],["Instagram","https://www.instagram.com/masumgandhi_/"]].map(([label,href])=>(
                 <a key={label} href={href} target="_blank" rel="noopener noreferrer" style={{ fontSize: 14, color: "#777" }}
                   className="hover:text-white transition-colors">{label}</a>
               ))}
@@ -45,7 +45,7 @@ export default function Footer({ dark = false }: { dark?: boolean }) {
         <div>
           <div style={{ fontSize: 13, fontWeight: 700, fontStyle: "italic" as const, letterSpacing: "0.08em", color: "#E8151B", marginBottom: 16, textTransform: "uppercase" as const }}>Listen</div>
           <div style={{ display: "flex", flexDirection: "column" as const, gap: 12 }}>
-            {[["Spotify","https://open.spotify.com/show/20CTgx38209p042nwCRyS8"],["YouTube","https://www.youtube.com/@masumngandhi"],["Instagram","https://www.instagram.com/masumgandhi_/"]].map(([label,href])=>(
+            {[["YouTube","https://www.youtube.com/@masumngandhi"],["Instagram","https://www.instagram.com/masumgandhi_/"]].map(([label,href])=>(
               <a key={label} href={href} target="_blank" rel="noopener noreferrer" style={{ color: "#aaa", fontSize: 15 }}
                 className="hover:text-[#0A0A0A] transition-colors">{label}</a>
             ))}

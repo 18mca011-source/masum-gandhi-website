@@ -96,7 +96,6 @@ export default function RootLayout({
                 "https://www.instagram.com/masumgandhi_/",
                 "https://in.linkedin.com/in/masumgandhi",
                 "https://x.com/masum_gandhi",
-                "https://open.spotify.com/show/20CTgx38209p042nwCRyS8",
               ],
               author: {
                 "@type": "Person",
