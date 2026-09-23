@@ -7,9 +7,9 @@ import Footer from "../components/Footer";
 const doctors = [
   { name: "Dr. Disha",           role: "Paediatrician & Neonatologist",       image: "/doctors/dr3.webp" },
   { name: "Dr. Kunjan Joshi",    role: "Periodontist",                         image: "/doctors/dr4.webp" },
-  { name: "Dr. Shuba Dharmana", role: "Celebrity Dermatologist",               image: "/doctors/dr7.webp" },
+  { name: "Dr. Shuba Dharmana", role: "Celebrity Aesthetic Surgeon, Founder LeJuene MedSpa", image: "/doctors/dr7.webp" },
   { name: "Dr. Devendra Dangar", role: "Paediatrician",                        image: "/doctors/dr8.webp" },
-  { name: "Dr. Poonam Dholakia", role: "Gynaecologist",                        image: "/doctors/dr9.webp" },
+  { name: "Dr. Poonam Dholakia", role: "Periodontist",                         image: "/doctors/dr9.webp" },
   { name: "Dr. Kishlay",         role: "Hypercarnivore Metabolic Doctor",      image: "/doctors/dr2.jpg" },
 ];
 
