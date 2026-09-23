@@ -8,14 +8,14 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <Navbar logoRed={false} />
       <main>
         <Hero />
         <About />
         <Episodes />
         <CTA />
       </main>
-      <Footer />
+      <Footer dark={false} />
     </>
   );
 }

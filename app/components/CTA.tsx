@@ -1,22 +1,15 @@
 export default function CTA() {
   return (
-    <section className="bg-primary py-14 md:py-16">
-      <div className="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div>
-          <h2 className="font-headline text-[40px] md:text-[56px] leading-none text-white">
-            BE A GUEST ON THE SHOW
-          </h2>
-          <p className="text-[14px] text-white/70 mt-2">
-            Join 90+ industry leaders who&apos;ve shared their story with 52k+ listeners across India.
-          </p>
-        </div>
-        <a
-          href="/be-a-guest"
-          className="flex-shrink-0 text-[13px] font-bold text-[#0A0A0A] bg-white uppercase tracking-widest px-8 py-4 hover:bg-white/90 transition-colors whitespace-nowrap"
-        >
-          Book Your Session →
-        </a>
+    <div style={{ background: "#E8151B", padding: "48px 32px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24, flexWrap: "wrap" as const }}>
+      <div>
+        <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(28px, 4vw, 48px)", color: "#fff", letterSpacing: "0.04em", lineHeight: 1 }}>Be a Guest on the Show</h2>
+        <p style={{ marginTop: 6, fontSize: 14, color: "rgba(255,255,255,0.7)" }}>Join 90+ industry leaders who&apos;ve shared their story with 52k+ listeners across India.</p>
       </div>
-    </section>
+      <a href="https://calendly.com/masumgandhi/30min" target="_blank" rel="noopener noreferrer"
+        style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#fff", color: "#000", padding: "14px 28px", fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" as const, textDecoration: "none", whiteSpace: "nowrap" as const }}
+        className="hover:opacity-85 transition-opacity">
+        Book Your Session →
+      </a>
+    </div>
   );
 }

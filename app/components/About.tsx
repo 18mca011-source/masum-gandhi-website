@@ -1,40 +1,34 @@
-const stats = [
-  { value: "90+",       label: "Episodes" },
-  { value: "10M+",      label: "Total Views" },
-  { value: "52K+",      label: "Community" },
-  { value: "Every Sat", label: "New Episode" },
-];
-
 export default function About() {
   return (
-    <section className="bg-white border-b border-black/8">
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2">
-        {/* Left: placeholder / photo area */}
-        <div className="bg-[#F0F0F0] min-h-[440px] md:min-h-[520px] flex items-end p-10">
-          <div>
-            <p className="font-headline text-[80px] md:text-[100px] leading-none text-[#0A0A0A]/10">MG</p>
-          </div>
+    <section style={{ background: "#F8F8F8", borderTop: "1px solid #D8D8D8", overflow: "hidden", padding: "60px 48px" }}>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", alignItems: "stretch", maxWidth: 1200, margin: "0 auto", gap: 60 }}
+        className="grid-cols-1 md:!grid-cols-[1fr_1fr]">
+        {/* Left: photo */}
+        <div style={{ position: "relative", overflow: "hidden", minHeight: 580, borderRadius: 4 }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="https://res.cloudinary.com/dx9zlffut/image/upload/v1779680173/IMG_2062_1_li8tou.jpg"
+            alt="Masum Gandhi"
+            style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block" }}
+          />
+          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, transparent 50%, #F8F8F8 95%)" }} />
         </div>
 
         {/* Right: text */}
-        <div className="flex flex-col justify-center px-8 py-14 md:px-12">
-          <p className="text-[11px] font-semibold tracking-[0.22em] uppercase text-primary mb-4">
-            Meet Your Host
-          </p>
-          <h2 className="font-headline text-[56px] md:text-[80px] leading-[0.9] text-[#0A0A0A] mb-6">
-            MASUM<br />GANDHI
-          </h2>
-          <p className="text-[14px] leading-relaxed text-[#555] mb-4">
+        <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", padding: "80px 60px 80px 40px" }}>
+          <div style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.2em", textTransform: "uppercase", color: "#E8151B", marginBottom: 12 }}>Meet Your Host</div>
+          <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(52px, 6vw, 88px)", lineHeight: 0.88, letterSpacing: "0.02em", color: "#0A0A0A", marginBottom: 24 }}>Masum<br />Gandhi</div>
+          <p style={{ fontSize: 15, lineHeight: 1.7, color: "#888", marginBottom: 14 }}>
             Masum Gandhi is the creator of India&apos;s first trigger-question based podcast — a format designed to go beyond surface-level interviews and uncover the real stories behind people&apos;s journeys.
           </p>
-          <p className="text-[14px] leading-relaxed text-[#555] mb-8">
+          <p style={{ fontSize: 15, lineHeight: 1.7, color: "#888", marginBottom: 14 }}>
             With 90+ conversations across healthcare, startups, finance, real estate, and entertainment, Masum has built a platform where industry leaders speak candidly about their wins, failures, and the lessons in between.
           </p>
-          <div className="border-t border-black/10 pt-6 grid grid-cols-4 gap-4">
-            {stats.map((s) => (
-              <div key={s.label}>
-                <p className="font-headline text-[28px] text-primary leading-none">{s.value}</p>
-                <p className="text-[10px] font-semibold uppercase tracking-widest text-[#888] mt-1">{s.label}</p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 20, marginTop: 32, borderTop: "1px solid #D8D8D8", paddingTop: 24 }}>
+            {[["90+","Episodes"],["10M+","Total Views"],["52K+","Community"],["Every Sat","New Episode"]].map(([val,label])=>(
+              <div key={label}>
+                <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 26, color: "#E8151B", lineHeight: 1.1 }}>{val}</div>
+                <div style={{ fontSize: 10, color: "#666", textTransform: "uppercase", letterSpacing: "0.1em", marginTop: 4 }}>{label}</div>
               </div>
             ))}
           </div>

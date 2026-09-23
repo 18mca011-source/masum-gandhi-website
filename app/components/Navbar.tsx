@@ -2,73 +2,32 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
-const navLinks = [
-  { label: "Episodes", href: "#episodes" },
-  { label: "Guests",   href: "#guests" },
-];
-
-export default function Navbar() {
+export default function Navbar({ logoRed = false }: { logoRed?: boolean }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white border-b border-black/8">
-      <div className="max-w-[1200px] mx-auto flex h-16 items-center justify-between px-6">
-        {/* Logo */}
-        <a href="#home" className="flex items-center gap-3">
-          <div className="w-9 h-9 bg-[#0A0A0A] rounded-[6px] flex items-center justify-center">
-            <span className="font-headline text-white text-[15px] leading-none">MG</span>
-          </div>
-        </a>
+    <header style={{ position: "sticky", top: 0, zIndex: 100, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 32px", height: 56, background: "rgba(255,255,255,0.92)", backdropFilter: "blur(12px)", borderBottom: "1px solid #D8D8D8" }}>
+      <a href="/" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
+        <div style={{ width: 34, height: 34, background: logoRed ? "#E8151B" : "#0A0A0A", borderRadius: 6, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Bebas Neue', sans-serif", fontSize: 18, color: "#fff", flexShrink: 0 }}>MG</div>
+      </a>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              className="text-[13px] font-semibold text-[#0A0A0A] uppercase tracking-widest hover:text-primary transition-colors"
-            >
-              {link.label}
-            </a>
-          ))}
-          <a
-            href="/be-a-guest"
-            className="text-[13px] font-bold text-white bg-primary uppercase tracking-widest px-5 py-2.5 rounded hover:bg-primary-dim transition-colors"
-          >
-            Be a Guest
-          </a>
-        </nav>
+      {/* Desktop */}
+      <nav className="hidden md:flex" style={{ alignItems: "center", gap: 8 }}>
+        <a href="/#episodes" style={{ textDecoration: "none", fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0A0A0A", padding: "7px 14px", borderRadius: 4 }} className="hover:text-[#E8151B] transition-colors">Episodes</a>
+        <a href="/be-a-guest" style={{ textDecoration: "none", fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0A0A0A", padding: "7px 14px", borderRadius: 4 }} className="hover:text-[#E8151B] transition-colors">Guests</a>
+        <a href="/be-a-guest" style={{ textDecoration: "none", fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", background: "#E8151B", color: "#fff", padding: "7px 16px", borderRadius: 4 }} className="hover:bg-[#b50f14] transition-colors">Be a Guest</a>
+      </nav>
 
-        {/* Mobile Hamburger */}
-        <button
-          className="md:hidden p-2 text-[#0A0A0A]"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
-      </div>
+      {/* Mobile hamburger */}
+      <button className="md:hidden p-2" onClick={() => setOpen(!open)} aria-label="Toggle menu" style={{ color: "#0A0A0A", background: "none", border: "none", cursor: "pointer" }}>
+        {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+      </button>
 
-      {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden bg-white border-t border-black/8 px-6 py-4 flex flex-col gap-1">
-          {navLinks.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="py-3 text-[13px] font-semibold text-[#0A0A0A] uppercase tracking-widest border-b border-black/5"
-            >
-              {link.label}
-            </a>
-          ))}
-          <a
-            href="/be-a-guest"
-            onClick={() => setOpen(false)}
-            className="mt-3 text-center text-[13px] font-bold text-white bg-primary uppercase tracking-widest px-5 py-3 rounded"
-          >
-            Be a Guest
-          </a>
+        <div className="md:hidden" style={{ position: "absolute", top: 56, left: 0, right: 0, background: "rgba(255,255,255,0.98)", borderBottom: "1px solid #D8D8D8", padding: "12px 32px 16px", display: "flex", flexDirection: "column", gap: 4 }}>
+          <a href="/#episodes" onClick={() => setOpen(false)} style={{ padding: "12px 0", fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0A0A0A", borderBottom: "1px solid #f0f0f0" }}>Episodes</a>
+          <a href="/be-a-guest" onClick={() => setOpen(false)} style={{ padding: "12px 0", fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#0A0A0A", borderBottom: "1px solid #f0f0f0" }}>Guests</a>
+          <a href="/be-a-guest" onClick={() => setOpen(false)} style={{ marginTop: 8, textAlign: "center", fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", background: "#E8151B", color: "#fff", padding: "12px", borderRadius: 4 }}>Be a Guest</a>
         </div>
       )}
     </header>

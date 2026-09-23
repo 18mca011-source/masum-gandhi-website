@@ -1,86 +1,92 @@
-const episodes = [
-  { id: "EP089", title: 'Cancer Surgeon Warning: "Gutkha Is Secretly Killing You"', guest: "Dr Shivam Pandya", thumb: "https://i.ytimg.com/vi/8pU3rpeDJRw/maxresdefault.jpg", url: "https://www.youtube.com/watch?v=8pU3rpeDJRw", age: "9d ago", featured: true },
-  { id: "EP088", title: "Top Paediatrician Explains: What Your Baby Really Needs", guest: "Dr. Devendra", thumb: "https://i.ytimg.com/vi/2mGsVHCktZM/maxresdefault.jpg", url: "https://www.youtube.com/watch?v=2mGsVHCktZM", age: "2w ago", featured: true },
-  { id: "EP087", title: "Autism Treatments Exposed: Ayurveda Can Reverse Autism Symptoms?", guest: "Partha M.", thumb: "https://i.ytimg.com/vi/7kzL8mMvLog/maxresdefault.jpg", url: "https://www.youtube.com/watch?v=7kzL8mMvLog", age: "3w ago", featured: false },
-  { id: "EP086", title: "Celebrity Dermatologist's ADVICE: How Celebrities Actually Look So Young", guest: "Dr.Shuba D.", thumb: "https://i.ytimg.com/vi/Yz4vKJT3mYU/maxresdefault.jpg", url: "https://www.youtube.com/watch?v=Yz4vKJT3mYU", age: "3mo ago", featured: false },
-  { id: "EP085", title: "Top Fertility Doctor: Why Are So Many Women Struggling To Get Pregnant?", guest: "Dr.Chaitra", thumb: "https://i.ytimg.com/vi/xM3A5VHkPHI/maxresdefault.jpg", url: "https://www.youtube.com/watch?v=xM3A5VHkPHI", age: "3mo ago", featured: false },
+"use client";
+import { useState } from "react";
+
+const VIDEOS = [
+  { id: "h60IAc_n-eg", title: 'EP089 | Cancer Surgeon Warning: "Gutkha Is Secretly Killing You" | Dr Shivam Pandya | Masum Gandhi', url: "https://www.youtube.com/watch?v=h60IAc_n-eg", thumb: "https://i.ytimg.com/vi/h60IAc_n-eg/hqdefault.jpg", published: "9d ago" },
+  { id: "87ghB-zQ1Co", title: "EP088 | Top Paediatrician Explains: What Your Baby Really Needs | Dr. Devendra | Masum Gandhi", url: "https://www.youtube.com/watch?v=87ghB-zQ1Co", thumb: "https://i.ytimg.com/vi/87ghB-zQ1Co/hqdefault.jpg", published: "2w ago" },
+  { id: "LPTttRQO2cM", title: "EP087 | Autism Treatments Exposed: Ayurveda Can Reverse Autism Symptoms? | Partha M. | Masum Gandhi", url: "https://www.youtube.com/watch?v=LPTttRQO2cM", thumb: "https://i.ytimg.com/vi/LPTttRQO2cM/hqdefault.jpg", published: "3w ago" },
+  { id: "xJUBslGT2RE", title: "EP086 | Celebrity Dermatologist's ADVICE: How Celebrities Actually Look So Young | Dr.Shuba D.", url: "https://www.youtube.com/watch?v=xJUBslGT2RE", thumb: "https://i.ytimg.com/vi/xJUBslGT2RE/hqdefault.jpg", published: "3mo ago" },
+  { id: "8pU3rpeDJRw", title: "EP085 | Top Fertility Doctor: Why Are So Many Women Struggling To Get Pregnant? | Dr.Chaitra | Masum", url: "https://www.youtube.com/watch?v=8pU3rpeDJRw", thumb: "https://i.ytimg.com/vi/8pU3rpeDJRw/hqdefault.jpg", published: "3mo ago" },
+  { id: "PjQVyCkkbDo", title: "EP084 | So Many Babies Are Dying Because of THIS (Watch to Save Yours) Ft.Dr. Disha | Masum Gandhi", url: "https://www.youtube.com/watch?v=PjQVyCkkbDo", thumb: "https://i.ytimg.com/vi/PjQVyCkkbDo/hqdefault.jpg", published: "3mo ago" },
+  { id: "hC_0nZp8EUE", title: "EP083 | Startup Reality: Burned ₹4.5 Crores Without Any Investors | Foodism, Vyom Shah | Masum Gandhi", url: "https://www.youtube.com/watch?v=hC_0nZp8EUE", thumb: "https://i.ytimg.com/vi/hC_0nZp8EUE/hqdefault.jpg", published: "3mo ago" },
+  { id: "HuYfmzzTdwU", title: "EP082 | Braces & Invisalign Expert: Why Are Your Teeth Getting Weaker Every Day? | Dr. Shayoni Patel", url: "https://www.youtube.com/watch?v=HuYfmzzTdwU", thumb: "https://i.ytimg.com/vi/HuYfmzzTdwU/hqdefault.jpg", published: "4mo ago" },
+  { id: "vHACWlBlcfM", title: "EP081 | Pet Care Founders: Stop Feeding Your Dog Parle-G & Roti — The Hidden Poisons | Paawsh", url: "https://www.youtube.com/watch?v=vHACWlBlcfM", thumb: "https://i.ytimg.com/vi/vHACWlBlcfM/hqdefault.jpg", published: "4mo ago" },
+  { id: "DFhA3l8wIFk", title: "EP080 | Veg Diet is a Scam! End of Veg vs Non-Veg Diet | Metabolic Dr.K | Masum Gandhi", url: "https://www.youtube.com/watch?v=DFhA3l8wIFk", thumb: "https://i.ytimg.com/vi/DFhA3l8wIFk/hqdefault.jpg", published: "4mo ago" },
+  { id: "9SqB-jIIARI", title: "EP079 | PPF vs Ceramic Coating: Don't Let Car Studios Scam You! | FILMSHOPPEE | Masum Gandhi", url: "https://www.youtube.com/watch?v=9SqB-jIIARI", thumb: "https://i.ytimg.com/vi/9SqB-jIIARI/hqdefault.jpg", published: "4mo ago" },
+  { id: "DGajGGBh8Gw", title: "EP078 | Best Part-Time Business Opportunity to Earn LAKHS in 2026 ft Thangvel Nadar | Masum Gandhi", url: "https://www.youtube.com/watch?v=DGajGGBh8Gw", thumb: "https://i.ytimg.com/vi/DGajGGBh8Gw/hqdefault.jpg", published: "5mo ago" },
+  { id: "Csw-6V9nFME", title: "EP077 | Startup Mistakes Founders Make | Hiring, HR Penalties, HR Careers | Vrishali M. | Masum G.", url: "https://www.youtube.com/watch?v=Csw-6V9nFME", thumb: "https://i.ytimg.com/vi/Csw-6V9nFME/hqdefault.jpg", published: "5mo ago" },
+  { id: "FRYZp3k4ohQ", title: "Husband DIVORCED Wife after she spent ₹4 LAKH on Zomato orders | Masum Gandhi", url: "https://www.youtube.com/watch?v=FRYZp3k4ohQ", thumb: "https://i.ytimg.com/vi/FRYZp3k4ohQ/hqdefault.jpg", published: "5mo ago" },
+  { id: "Bl38J8YTa44", title: "The Future of Ahmedabad Real Estate in 2050 ft. Chitrak Shah, Shivalik Group | Masum Gandhi", url: "https://www.youtube.com/watch?v=Bl38J8YTa44", thumb: "https://i.ytimg.com/vi/Bl38J8YTa44/hqdefault.jpg", published: "6mo ago" },
+  { id: "ud6UaD2PFBA", title: "The Dark Reality of Indian Salons: Expired Products, Scams & Fake Reviews Ft.Vabez | Masum Gandhi", url: "https://www.youtube.com/watch?v=ud6UaD2PFBA", thumb: "https://i.ytimg.com/vi/ud6UaD2PFBA/hqdefault.jpg", published: "7mo ago" },
+  { id: "euc8F_AK7_U", title: "Why the Next 10 Years Belong to Ahmedabad | Billionaire's Mindset | Yash Shah | Masum Gandhi", url: "https://www.youtube.com/watch?v=euc8F_AK7_U", thumb: "https://i.ytimg.com/vi/euc8F_AK7_U/hqdefault.jpg", published: "7mo ago" },
+  { id: "7qyXzQ4DeEY", title: "Build a Successful Baking Business: Desserts, Branding, Pricing & Growth | Anuja Kamdar | Masum Gandhi", url: "https://www.youtube.com/watch?v=7qyXzQ4DeEY", thumb: "https://i.ytimg.com/vi/7qyXzQ4DeEY/hqdefault.jpg", published: "9mo ago" },
+  { id: "dcXY7jIfA4I", title: "How to Sell Paintings & Earn Crores | Art Industry Reality & Scams | Malti Sharma | Masum Gandhi", url: "https://www.youtube.com/watch?v=dcXY7jIfA4I", thumb: "https://i.ytimg.com/vi/dcXY7jIfA4I/hqdefault.jpg", published: "10mo ago" },
+  { id: "MbqwiBA9NZc", title: "Say Goodbye to Anxiety & Depression, Tips for Better Mental Health | Dr. Jwalant Chag | Masum Gandhi", url: "https://www.youtube.com/watch?v=MbqwiBA9NZc", thumb: "https://i.ytimg.com/vi/MbqwiBA9NZc/hqdefault.jpg", published: "10mo ago" },
+  { id: "Gl9q3scEj-Y", title: "Make Your Home Look Expensive on a Budget | Interior Secrets from Ashish Panchal | Masum Gandhi", url: "https://www.youtube.com/watch?v=Gl9q3scEj-Y", thumb: "https://i.ytimg.com/vi/Gl9q3scEj-Y/hqdefault.jpg", published: "11mo ago" },
+  { id: "ONFZIlt3Mcc", title: "Parenting Tips For NEW MOMs | Stubborn & Hyperactive Child | Niharika & Meshwa | Masum Gandhi", url: "https://www.youtube.com/watch?v=ONFZIlt3Mcc", thumb: "https://i.ytimg.com/vi/ONFZIlt3Mcc/hqdefault.jpg", published: "11mo ago" },
+  { id: "taLQcWPPAQQ", title: "EP072 | Idli Point: How One Idli Stall Became a ₹7 Crore Business | Thangvel Nadar | Masum Gandhi", url: "https://www.youtube.com/watch?v=taLQcWPPAQQ", thumb: "https://i.ytimg.com/vi/taLQcWPPAQQ/hqdefault.jpg", published: "1yr ago" },
 ];
 
-function EpisodeCard({ ep, large }: { ep: typeof episodes[0]; large?: boolean }) {
-  return (
-    <a
-      href={ep.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group relative overflow-hidden block bg-black"
-    >
-      {/* Thumbnail */}
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={ep.thumb}
-        alt={ep.title}
-        className={`w-full object-cover transition-transform duration-500 group-hover:scale-105 ${large ? "aspect-[16/9]" : "aspect-[16/9]"}`}
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+const PAGE_SIZE = 8;
 
-      {/* Badge */}
-      {ep.id === "EP089" || ep.id === "EP088" ? (
-        <div className="absolute top-3 left-3 bg-primary text-white text-[9px] font-bold uppercase tracking-widest px-2 py-1">
-          NEW
-        </div>
-      ) : null}
-
-      {/* Text */}
-      <div className="absolute bottom-0 left-0 right-0 p-4">
-        <p className="text-[11px] font-semibold text-[#aaa] mb-1">{ep.id}</p>
-        <p className={`font-semibold text-white leading-tight ${large ? "text-[16px] md:text-[18px]" : "text-[13px]"}`}>
-          {ep.title}
-        </p>
-        <p className="text-[10px] text-[#777] mt-1.5">{ep.age}</p>
-      </div>
-    </a>
-  );
+function cleanTitle(title: string) {
+  return title.replace(/\s*\|\s*Masum Gandhi\s*$/i, "").replace(/\s*\|\s*Masum\s*$/i, "");
 }
 
 export default function Episodes() {
-  const [f0, f1, ...rest] = episodes;
+  const [shown, setShown] = useState(PAGE_SIZE);
+  const visible = VIDEOS.slice(0, shown);
+  const allLoaded = shown >= VIDEOS.length;
 
   return (
-    <section id="episodes" className="bg-white py-16 md:py-20 border-b border-black/8">
-      <div className="max-w-[1200px] mx-auto px-6">
-        <div className="flex items-baseline justify-between mb-8">
-          <h2 className="font-headline text-[56px] md:text-[80px] leading-none text-[#0A0A0A]">
-            EPISODES<span className="text-primary">.</span>
-          </h2>
-          <p className="hidden md:block text-[11px] font-semibold tracking-[0.18em] uppercase text-[#888]">
-            Tap an episode to listen
-          </p>
+    <section id="episodes" style={{ padding: "0 24px 64px", maxWidth: 1200, margin: "0 auto" }}>
+      <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", marginBottom: 24 }}>
+        <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 42, letterSpacing: "0.04em", color: "#0A0A0A" }}>
+          Episodes<span style={{ color: "#E8151B" }}>.</span>
         </div>
-
-        {/* Featured 2-col */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[3px] bg-black/8 mb-[3px]">
-          <EpisodeCard ep={f0} large />
-          <EpisodeCard ep={f1} large />
-        </div>
-
-        {/* 3-col grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-[3px] bg-black/8">
-          {rest.map((ep) => (
-            <EpisodeCard key={ep.id} ep={ep} />
-          ))}
-        </div>
-
-        <div className="mt-8 text-center">
-          <a
-            href="https://www.youtube.com/@masumngandhi"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block text-[12px] font-bold uppercase tracking-widest border border-black/20 px-8 py-3 hover:border-primary hover:text-primary transition-colors"
-          >
-            Show More Episodes
-          </a>
+        <div style={{ fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase" as const, color: "#555" }}>
+          Tap an episode to listen
         </div>
       </div>
+
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 3 }}>
+        {visible.map((v, i) => {
+          const isFeatured = i === 0;
+          const title = cleanTitle(v.title);
+          return (
+            <a key={v.id} href={v.url} target="_blank" rel="noopener noreferrer"
+              style={{
+                position: "relative", background: "#EBEBEB", overflow: "hidden",
+                cursor: "pointer", aspectRatio: isFeatured ? "32/10" : "16/10",
+                display: "flex", alignItems: "flex-end", textDecoration: "none",
+                gridColumn: isFeatured ? "span 2" : undefined,
+              }}
+              className="group"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={v.thumb} alt={title} loading="lazy"
+                style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.45)", transition: "filter .3s, transform .4s" }}
+                className="group-hover:brightness-[0.3] group-hover:scale-[1.04]" />
+              <div style={{ position: "relative", zIndex: 2, padding: 16, width: "100%", background: "linear-gradient(to top, rgba(0,0,0,0.92) 0%, transparent 100%)" }}>
+                <div style={{ fontSize: isFeatured ? 15 : 13, fontWeight: 600, lineHeight: 1.35, color: "#fff", marginBottom: 5, display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical" as const, overflow: "hidden" }}>{title}</div>
+                <div style={{ fontSize: 11, color: "#555" }}>{v.published}</div>
+                <div className="hidden group-hover:block" style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase" as const, color: "#E8151B", marginTop: 6 }}>Watch on YouTube →</div>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+
+      <button
+        onClick={() => {
+          if (allLoaded) window.open("https://www.youtube.com/@masumngandhi/videos", "_blank");
+          else setShown(s => Math.min(s + PAGE_SIZE, VIDEOS.length));
+        }}
+        style={{ display: "block", margin: "20px auto 0", padding: "12px 32px", background: "transparent", border: "1px solid #D8D8D8", color: "#0A0A0A", fontSize: 12, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase" as const, cursor: "pointer", fontFamily: "inherit" }}
+        className="hover:border-black hover:text-[#E8151B] transition-colors"
+      >
+        {allLoaded ? "View All on YouTube →" : "Show More Episodes"}
+      </button>
     </section>
   );
 }

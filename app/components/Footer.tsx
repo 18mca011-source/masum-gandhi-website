@@ -1,79 +1,70 @@
-import { Mail, Phone } from "lucide-react";
+export default function Footer({ dark = false }: { dark?: boolean }) {
+  if (dark) {
+    return (
+      <footer style={{ background: "#080808", borderTop: "1px solid #EBEBEB" }}>
+        <div className="max-w-[1200px] mx-auto px-12 py-14 grid grid-cols-1 md:grid-cols-3 gap-12 pb-10">
+          <div>
+            <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 32, color: "#0A0A0A", letterSpacing: "0.04em", lineHeight: 1 }}>Masum<br />Gandhi</div>
+            <div style={{ fontSize: 12, color: "#444", marginTop: 8, lineHeight: 1.5 }}>India&apos;s First Trigger-Question Podcast</div>
+          </div>
+          <div>
+            <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase" as const, color: "#E8151B", fontStyle: "italic" as const, marginBottom: 16 }}>Listen</div>
+            <div style={{ display: "flex", flexDirection: "column" as const, gap: 10 }}>
+              {[["Spotify","https://open.spotify.com/show/20CTgx38209p042nwCRyS8"],["YouTube","https://www.youtube.com/@masumngandhi"],["Instagram","https://www.instagram.com/masumgandhi_/"]].map(([label,href])=>(
+                <a key={label} href={href} target="_blank" rel="noopener noreferrer" style={{ fontSize: 14, color: "#777" }}
+                  className="hover:text-white transition-colors">{label}</a>
+              ))}
+            </div>
+          </div>
+          <div>
+            <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase" as const, color: "#E8151B", fontStyle: "italic" as const, marginBottom: 16 }}>Follow</div>
+            <div style={{ display: "flex", gap: 12, marginBottom: 20 }}>
+              {[["YT","https://www.youtube.com/@masumngandhi"],["IG","https://www.instagram.com/masumgandhi_/"],["in","https://www.linkedin.com/in/masumgandhi/"],["X","https://x.com/masumgandhi_"]].map(([label,href])=>(
+                <a key={label} href={href} target="_blank" rel="noopener noreferrer"
+                  style={{ width: 36, height: 36, borderRadius: "50%", border: "1px solid #2a2a2a", display: "flex", alignItems: "center", justifyContent: "center", color: "#888", fontSize: 13, textDecoration: "none" }}
+                  className="hover:border-[#E8151B] hover:text-[#E8151B] transition-colors">{label}</a>
+              ))}
+            </div>
+            <div style={{ fontSize: 12, color: "#555" }}>Partnerships: connect.masumgandhi@gmail.com</div>
+          </div>
+        </div>
+        <div className="max-w-[1200px] mx-auto px-12" style={{ borderTop: "1px solid #1a1a1a", padding: "20px 48px", fontSize: 12, color: "#333", textAlign: "center" as const }}>
+          © 2026 Masum Gandhi Podcast. All rights reserved.
+        </div>
+      </footer>
+    );
+  }
 
-const links = [
-  { label: "Episodes",   href: "#episodes" },
-  { label: "Guests",     href: "#guests" },
-  { label: "Be a Guest", href: "#be-a-guest" },
-];
-
-const socials = [
-  { label: "Instagram", href: "https://www.instagram.com/masumgandhi_/",   icon: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg> },
-  { label: "YouTube",   href: "https://www.youtube.com/@masumngandhi",    icon: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></svg> },
-  { label: "LinkedIn",  href: "https://in.linkedin.com/in/masumgandhi",   icon: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg> },
-  { label: "Spotify",   href: "https://open.spotify.com/show/20CTgx38209p042nwCRyS8?si=YL_km4YZTBCGYu_UqHtXAA", icon: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 11.973c2.5-1.473 5.5-.973 7.5.527M9 15c1.5-1 4-1.5 6 .5M7 9c3-1.5 6-1 9 1"/></svg> },
-];
-
-export default function Footer() {
   return (
-    <footer id="contact" className="bg-[#0A0A0A] border-t border-white/8">
-      <div className="max-w-[1200px] mx-auto px-6 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr] gap-10 mb-12">
-          {/* Brand */}
-          <div>
-            <div className="flex items-center gap-3 mb-5">
-              <div className="w-9 h-9 bg-white rounded-[6px] flex items-center justify-center">
-                <span className="font-headline text-[#0A0A0A] text-[15px] leading-none">MG</span>
-              </div>
-              <span className="font-headline text-white text-xl">Masum Gandhi Podcast</span>
-            </div>
-            <p className="text-[13px] text-[#666] leading-relaxed max-w-xs mb-6">
-              India&apos;s first trigger-question based podcast with 90+ conversations featuring
-              founders, healthcare experts, and industry leaders.
-            </p>
-            <div className="flex items-center gap-3">
-              {socials.map((s) => (
-                <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
-                  aria-label={s.label}
-                  className="w-8 h-8 border border-white/15 flex items-center justify-center text-[#666] hover:text-white hover:border-white/40 transition-colors">
-                  {s.icon}
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Links */}
-          <div>
-            <h3 className="text-[11px] font-semibold tracking-[0.2em] uppercase text-[#555] mb-5">Navigation</h3>
-            <ul className="space-y-3">
-              {links.map((l) => (
-                <li key={l.label}>
-                  <a href={l.href} className="text-[13px] text-[#666] hover:text-white transition-colors">{l.label}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h3 className="text-[11px] font-semibold tracking-[0.2em] uppercase text-[#555] mb-5">Contact</h3>
-            <div className="space-y-3">
-              <a href="mailto:connect.masumgandhi@gmail.com"
-                className="flex items-center gap-2 text-[13px] text-[#666] hover:text-white transition-colors">
-                <Mail className="h-4 w-4 text-primary flex-shrink-0" />
-                connect.masumgandhi@gmail.com
-              </a>
-              <a href="tel:+919773402508"
-                className="flex items-center gap-2 text-[13px] text-[#666] hover:text-white transition-colors">
-                <Phone className="h-4 w-4 text-primary flex-shrink-0" />
-                +91 97734 02508
-              </a>
-            </div>
+    <footer style={{ background: "#F8F8F8", borderTop: "1px solid #D8D8D8" }}>
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-14">
+        <div>
+          <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(40px, 5vw, 72px)", lineHeight: 0.88, letterSpacing: "0.02em", color: "#0A0A0A" }}>Masum<br />Gandhi</div>
+          <div style={{ marginTop: 10, fontSize: 11, fontWeight: 600, letterSpacing: "0.2em", textTransform: "uppercase" as const, color: "#888" }}>India&apos;s First Trigger-Question Podcast</div>
+        </div>
+        <div>
+          <div style={{ fontSize: 13, fontWeight: 700, fontStyle: "italic" as const, letterSpacing: "0.08em", color: "#E8151B", marginBottom: 16, textTransform: "uppercase" as const }}>Listen</div>
+          <div style={{ display: "flex", flexDirection: "column" as const, gap: 12 }}>
+            {[["Spotify","https://open.spotify.com/show/20CTgx38209p042nwCRyS8"],["YouTube","https://www.youtube.com/@masumngandhi"],["Instagram","https://www.instagram.com/masumgandhi_/"]].map(([label,href])=>(
+              <a key={label} href={href} target="_blank" rel="noopener noreferrer" style={{ color: "#aaa", fontSize: 15 }}
+                className="hover:text-[#0A0A0A] transition-colors">{label}</a>
+            ))}
           </div>
         </div>
-
-        <div className="border-t border-white/8 pt-6">
-          <p className="text-[12px] text-[#444]">© 2026 Masum Gandhi Podcast. All rights reserved.</p>
+        <div>
+          <div style={{ fontSize: 13, fontWeight: 700, fontStyle: "italic" as const, letterSpacing: "0.08em", color: "#E8151B", marginBottom: 16, textTransform: "uppercase" as const }}>Follow</div>
+          <div style={{ display: "flex", gap: 10, flexWrap: "wrap" as const, marginBottom: 24 }}>
+            {[["YT","https://www.youtube.com/@masumngandhi"],["IG","https://www.instagram.com/masumgandhi_/"],["in","https://www.linkedin.com/in/masumgandhi/"],["X","https://x.com/masumgandhi_"]].map(([label,href])=>(
+              <a key={label} href={href} target="_blank" rel="noopener noreferrer"
+                style={{ width: 42, height: 42, borderRadius: "50%", background: "#E5E5E5", display: "flex", alignItems: "center", justifyContent: "center", color: "#888", textDecoration: "none", fontSize: 13 }}
+                className="hover:bg-[#E8151B] hover:text-black transition-colors">{label}</a>
+            ))}
+          </div>
+          <div style={{ fontSize: 13, color: "#999" }}>Partnerships: <a href="mailto:connect.masumgandhi@gmail.com" style={{ color: "#E8151B" }}>connect.masumgandhi@gmail.com</a></div>
         </div>
+      </div>
+      <div className="max-w-[1200px] mx-auto" style={{ borderTop: "1px solid #D8D8D8", margin: "0 auto", padding: "20px 48px", fontSize: 12, color: "#333", textAlign: "center" as const }}>
+        © 2026 Masum Gandhi Podcast. All rights reserved.
       </div>
     </footer>
   );
