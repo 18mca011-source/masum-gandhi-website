@@ -46,8 +46,7 @@ export default function Footer({ dark = false }: { dark?: boolean }) {
           <div style={{ fontSize: 13, fontWeight: 700, fontStyle: "italic" as const, letterSpacing: "0.08em", color: "#E8151B", marginBottom: 16, textTransform: "uppercase" as const }}>Listen</div>
           <div style={{ display: "flex", flexDirection: "column" as const, gap: 12 }}>
             {[["YouTube","https://www.youtube.com/@masumngandhi"],["Instagram","https://www.instagram.com/masumgandhi_/"]].map(([label,href])=>(
-              <a key={label} href={href} target="_blank" rel="noopener noreferrer" style={{ fontSize: 15 }}
-                className="text-[#aaa] hover:text-[#E8151B] transition-colors">{label}</a>
+              <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="footer-listen-link">{label}</a>
             ))}
           </div>
         </div>
@@ -61,6 +60,7 @@ export default function Footer({ dark = false }: { dark?: boolean }) {
             ))}
           </div>
           <div style={{ fontSize: 13, color: "#999" }}>Partnerships: <a href="mailto:connect.masumgandhi@gmail.com" style={{ color: "#E8151B" }}>connect.masumgandhi@gmail.com</a></div>
+          <div style={{ fontSize: 13, color: "#999", marginTop: 6 }}>WhatsApp: <a href="https://wa.me/919773402508" target="_blank" rel="noopener noreferrer" style={{ color: "#E8151B" }}>+91 97734 02508</a></div>
         </div>
       </div>
       <div className="max-w-[1200px] mx-auto" style={{ borderTop: "1px solid #D8D8D8", margin: "0 auto", padding: "20px 48px", fontSize: 12, color: "#333", textAlign: "center" as const }}>
