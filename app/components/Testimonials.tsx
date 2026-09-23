@@ -8,8 +8,8 @@ const testimonials = [
   },
   {
     name: "Aditi Kulkarni",
-    role: "Founder: Yuvana Wellness",
-    quote: "Masum and his team are very cordial and professional in their dealings. I highly recommend them to all new age founders who want to amplify their reach.",
+    role: "Patient Care | Mental Health Care | Visiting Faculty",
+    quote: "Masum and his team are very cordial and professional in their dealings. Due to some unforeseen circumstances, the dates for shooting had to be moved but it was all managed quite efficiently. I highly recommended them to all new age founders or individuals who would want to make their voiced heard.",
   },
   {
     name: "Niharika & Meshwa Patel",
