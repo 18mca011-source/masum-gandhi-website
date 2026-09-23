@@ -12,9 +12,9 @@ const testimonials = [
     quote: "Masum and his team are very cordial and professional in their dealings. Due to some unforeseen circumstances, the dates for shooting had to be moved but it was all managed quite efficiently. I highly recommended them to all new age founders or individuals who would want to make their voiced heard.",
   },
   {
-    name: "Niharika & Meshwa Patel",
-    role: "Founders: Rhythm Rumble",
-    quote: "An incredible experience! The team made us feel so comfortable and the questions brought out perspectives we hadn't even thought to share publicly before.",
+    name: "Maitri Joshi",
+    role: "",
+    quote: "It was an amazing experience being on a podcast with Masum. He's doing fabulous work in his industry and has a great curiosity for learning. With many Shark Tank founders joining his podcast, he's truly making a mark. I highly recommend him!",
   },
 ];
 
