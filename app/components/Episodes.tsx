@@ -1,99 +1,83 @@
-import { Eye, ExternalLink } from "lucide-react";
-
 const episodes = [
-  {
-    title: "How Idli Point Is Disrupting Indian QSR",
-    guest: "Thangvel Nadar",
-    guestRole: "Founder - Idli Point",
-    views: "33k",
-    badge: "Most Viewed",
-    thumbnail: "/episodes/ep3-thumbnail.webp",
-    link: "https://www.youtube.com/watch?v=taLQcWPPAQQ",
-  },
-  {
-    title: "Veg Diet is a Scam! End of Veg vs Non-Veg Diet | Dr. Kishlay | Masum Gandhi",
-    guest: "Dr. Kishlay",
-    guestRole: "Hypercarnivore Metabolic Doctor",
-    views: "28k",
-    badge: "Recent Viral",
-    thumbnail: "/episodes/ep1-thumbnail.jpg",
-    link: "https://www.youtube.com/watch?v=DFhA3l8wIFk",
-  },
-  {
-    title: "Salon ki Sacchai: Scams, Expired Products, Staff Betrayal & Fake Discounts",
-    guest: "Vabez",
-    guestRole: "Founder - Sam's Salon",
-    views: "12k",
-    badge: "Industry Truths",
-    thumbnail: "/episodes/ep2-thumbnail.webp",
-    link: "https://www.youtube.com/watch?v=ud6UaD2PFBA",
-  },
+  { id: "EP089", title: 'Cancer Surgeon Warning: "Gutkha Is Secretly Killing You"', guest: "Dr Shivam Pandya", thumb: "https://i.ytimg.com/vi/8pU3rpeDJRw/maxresdefault.jpg", url: "https://www.youtube.com/watch?v=8pU3rpeDJRw", age: "9d ago", featured: true },
+  { id: "EP088", title: "Top Paediatrician Explains: What Your Baby Really Needs", guest: "Dr. Devendra", thumb: "https://i.ytimg.com/vi/2mGsVHCktZM/maxresdefault.jpg", url: "https://www.youtube.com/watch?v=2mGsVHCktZM", age: "2w ago", featured: true },
+  { id: "EP087", title: "Autism Treatments Exposed: Ayurveda Can Reverse Autism Symptoms?", guest: "Partha M.", thumb: "https://i.ytimg.com/vi/7kzL8mMvLog/maxresdefault.jpg", url: "https://www.youtube.com/watch?v=7kzL8mMvLog", age: "3w ago", featured: false },
+  { id: "EP086", title: "Celebrity Dermatologist's ADVICE: How Celebrities Actually Look So Young", guest: "Dr.Shuba D.", thumb: "https://i.ytimg.com/vi/Yz4vKJT3mYU/maxresdefault.jpg", url: "https://www.youtube.com/watch?v=Yz4vKJT3mYU", age: "3mo ago", featured: false },
+  { id: "EP085", title: "Top Fertility Doctor: Why Are So Many Women Struggling To Get Pregnant?", guest: "Dr.Chaitra", thumb: "https://i.ytimg.com/vi/xM3A5VHkPHI/maxresdefault.jpg", url: "https://www.youtube.com/watch?v=xM3A5VHkPHI", age: "3mo ago", featured: false },
 ];
 
-export default function Episodes() {
+function EpisodeCard({ ep, large }: { ep: typeof episodes[0]; large?: boolean }) {
   return (
-    <section id="episodes" className="bg-white py-16 md:py-24 border-t border-black/8">
+    <a
+      href={ep.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group relative overflow-hidden block bg-black"
+    >
+      {/* Thumbnail */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={ep.thumb}
+        alt={ep.title}
+        className={`w-full object-cover transition-transform duration-500 group-hover:scale-105 ${large ? "aspect-[16/9]" : "aspect-[16/9]"}`}
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+
+      {/* Badge */}
+      {ep.id === "EP089" || ep.id === "EP088" ? (
+        <div className="absolute top-3 left-3 bg-primary text-white text-[9px] font-bold uppercase tracking-widest px-2 py-1">
+          NEW
+        </div>
+      ) : null}
+
+      {/* Text */}
+      <div className="absolute bottom-0 left-0 right-0 p-4">
+        <p className="text-[11px] font-semibold text-[#aaa] mb-1">{ep.id}</p>
+        <p className={`font-semibold text-white leading-tight ${large ? "text-[16px] md:text-[18px]" : "text-[13px]"}`}>
+          {ep.title}
+        </p>
+        <p className="text-[10px] text-[#777] mt-1.5">{ep.age}</p>
+      </div>
+    </a>
+  );
+}
+
+export default function Episodes() {
+  const [f0, f1, ...rest] = episodes;
+
+  return (
+    <section id="episodes" className="bg-white py-16 md:py-20 border-b border-black/8">
       <div className="max-w-[1200px] mx-auto px-6">
-        {/* Header */}
         <div className="flex items-baseline justify-between mb-8">
-          <div>
-            <p className="text-[11px] font-semibold tracking-[0.2em] uppercase text-primary mb-2">Episodes</p>
-            <h2 className="font-headline text-5xl md:text-7xl text-[#0A0A0A] leading-none">
-              Top Performing<br />Episodes
-            </h2>
-          </div>
-          <a
-            href="https://www.youtube.com/@masumngandhi"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-2 text-[12px] font-semibold text-[#0A0A0A] uppercase tracking-widest border-b border-black/30 pb-0.5 hover:border-primary hover:text-primary transition-colors"
-          >
-            View All <ExternalLink className="w-3.5 h-3.5" />
-          </a>
+          <h2 className="font-headline text-[56px] md:text-[80px] leading-none text-[#0A0A0A]">
+            EPISODES<span className="text-primary">.</span>
+          </h2>
+          <p className="hidden md:block text-[11px] font-semibold tracking-[0.18em] uppercase text-[#888]">
+            Tap an episode to listen
+          </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-[3px] bg-black/8">
-          {episodes.map((ep) => (
-            <a
-              key={ep.title}
-              href={ep.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block bg-white overflow-hidden hover:bg-[#F8F8F8] transition-colors"
-            >
-              <div className="relative w-full overflow-hidden">
-                <img
-                  src={ep.thumbnail}
-                  alt={ep.title}
-                  className="w-full aspect-video object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <span className="absolute top-3 left-3 bg-primary text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1">
-                  {ep.badge}
-                </span>
-                <span className="absolute bottom-3 right-3 flex items-center gap-1 bg-black/70 text-white text-[11px] px-2 py-1 backdrop-blur-sm">
-                  <Eye className="w-3 h-3" /> {ep.views}
-                </span>
-              </div>
-              <div className="p-5">
-                <h3 className="font-accent font-bold text-[#0A0A0A] text-[14px] leading-snug mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                  {ep.title}
-                </h3>
-                <p className="text-[12px] text-[#888]">{ep.guest} · {ep.guestRole}</p>
-              </div>
-            </a>
+        {/* Featured 2-col */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[3px] bg-black/8 mb-[3px]">
+          <EpisodeCard ep={f0} large />
+          <EpisodeCard ep={f1} large />
+        </div>
+
+        {/* 3-col grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-[3px] bg-black/8">
+          {rest.map((ep) => (
+            <EpisodeCard key={ep.id} ep={ep} />
           ))}
         </div>
 
-        {/* Mobile view all */}
-        <div className="mt-6 md:hidden">
+        <div className="mt-8 text-center">
           <a
             href="https://www.youtube.com/@masumngandhi"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-[12px] font-semibold text-[#0A0A0A] uppercase tracking-widest border-b border-black/30 pb-0.5"
+            className="inline-block text-[12px] font-bold uppercase tracking-widest border border-black/20 px-8 py-3 hover:border-primary hover:text-primary transition-colors"
           >
-            View All Episodes <ExternalLink className="w-3.5 h-3.5" />
+            Show More Episodes
           </a>
         </div>
       </div>
