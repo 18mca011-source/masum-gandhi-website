@@ -47,7 +47,7 @@ export default function Footer({ dark = false }: { dark?: boolean }) {
           <div style={{ display: "flex", flexDirection: "column" as const, gap: 12 }}>
             {[["YouTube","https://www.youtube.com/@masumngandhi"],["Instagram","https://www.instagram.com/masumgandhi_/"]].map(([label,href])=>(
               <a key={label} href={href} target="_blank" rel="noopener noreferrer" style={{ color: "#aaa", fontSize: 15 }}
-                className="hover:text-[#0A0A0A] transition-colors">{label}</a>
+                className="hover:text-[#E8151B] transition-colors">{label}</a>
             ))}
           </div>
         </div>
