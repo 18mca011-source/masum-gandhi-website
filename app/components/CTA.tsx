@@ -1,58 +1,45 @@
-import { CalendarDays, Mic, Film, Users } from "lucide-react";
+import { Mic, Film, Users } from "lucide-react";
 
 const benefits = [
-  { icon: <Mic className="w-5 h-5 text-yellow-400" />, label: "Professional Studio" },
-  { icon: <Film className="w-5 h-5 text-yellow-400" />, label: "Expert Production" },
-  { icon: <Users className="w-5 h-5 text-yellow-400" />, label: "52k+ Reach" },
+  { icon: Mic,   label: "Professional Studio" },
+  { icon: Film,  label: "Expert Production" },
+  { icon: Users, label: "52k+ Reach" },
 ];
 
 export default function CTA() {
   return (
-    <section id="be-a-guest" className="bg-[#101010] py-12 md:py-24">
-      <div className="container mx-auto px-4 md:px-6 text-center">
-        <div className="text-card-foreground shadow-sm max-w-4xl mx-auto border border-white/10 rounded-2xl p-6 md:p-12 text-center"
-          style={{ background: "rgba(26,26,26,0.8)" }}
-        >
-          <div className="inline-block p-4 bg-white/5 rounded-2xl ring-1 ring-white/10 backdrop-blur-sm mb-6">
-            <CalendarDays className="h-10 w-10 text-yellow-400" />
-          </div>
+    <section id="be-a-guest" className="bg-[#0A0A0A] py-16 md:py-24">
+      <div className="max-w-[1200px] mx-auto px-6 text-center">
+        <p className="text-[11px] font-semibold tracking-[0.2em] uppercase text-primary mb-4">Ready?</p>
+        <h2 className="font-headline text-5xl md:text-[80px] text-white leading-none mb-6">
+          Share Your Story<br />with 52k+ People
+        </h2>
+        <p className="max-w-xl mx-auto text-[14px] text-[#888] leading-relaxed mb-8">
+          Join 90+ industry leaders who&apos;ve sat across from Masum to share their real journey —
+          the wins, the failures, and everything in between.
+        </p>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-headline text-white font-bold leading-tight">
-            Ready to Share Your Story?
-          </h2>
-          <p className="mt-4 max-w-xl mx-auto text-base md:text-lg text-white/70 font-accent px-4">
-            Book a discovery call with Masum and let&apos;s create something extraordinary together.
-          </p>
-
-          {/* Benefits */}
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
-            {benefits.map((b) => (
-              <div
-                key={b.label}
-                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-sm text-white/80"
-              >
-                {b.icon}
-                <span className="font-accent font-semibold">{b.label}</span>
+        {/* Benefits */}
+        <div className="flex flex-wrap justify-center gap-4 mb-10">
+          {benefits.map((b) => {
+            const Icon = b.icon;
+            return (
+              <div key={b.label} className="flex items-center gap-2 text-[12px] text-[#888] border border-white/10 px-4 py-2">
+                <Icon className="w-4 h-4 text-primary" />
+                {b.label}
               </div>
-            ))}
-          </div>
-
-          <div className="mt-8 flex justify-center">
-            <a
-              href="https://calendly.com/masumgandhi/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 h-11 font-bold text-white bg-gradient-to-r from-yellow-400 to-purple-600 rounded-lg font-accent px-6 py-6 text-base sm:text-lg hover:scale-105 transition-transform flex items-center text-center"
-            >
-              <CalendarDays className="mr-2 h-5 w-5" />
-              Schedule Your Session
-            </a>
-          </div>
-
-          <p className="mt-6 text-white/40 font-accent text-sm">
-            Join 90+ industry leaders who&apos;ve shared their journey · 52k+ community
-          </p>
+            );
+          })}
         </div>
+
+        <a
+          href="https://calendly.com/masumgandhi/30min"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block text-[13px] font-bold text-white bg-primary uppercase tracking-widest px-10 py-4 hover:bg-primary-dim transition-colors"
+        >
+          Book a Discovery Call →
+        </a>
       </div>
     </section>
   );

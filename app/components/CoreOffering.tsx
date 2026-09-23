@@ -1,100 +1,43 @@
 import { Zap, Users, Video, ClipboardList, Search, TrendingUp, Globe, Tag } from "lucide-react";
 
 const usps = [
-  {
-    icon: <Zap className="w-6 h-6 text-yellow-400" />,
-    title: "Trigger Question-Based Format",
-    description:
-      "Unlike traditional interviews, every conversation is curated around questions that trigger the audience, uncover real stories and lived experiences.",
-  },
-  {
-    icon: <Users className="w-6 h-6 text-yellow-400" />,
-    title: "Premium Guest Portfolio",
-    description:
-      "With 90+ podcast guests across industries, the platform has built credibility among professionals, founders, doctors and business leaders.",
-  },
-  {
-    icon: <Video className="w-6 h-6 text-yellow-400" />,
-    title: "High-End Production Quality",
-    description:
-      "We work exclusively with industry-standard studio spaces featuring premium audio and video equipment,no compromises on quality.",
-  },
-  {
-    icon: <Search className="w-6 h-6 text-yellow-400" />,
-    title: "Deep & Customised Research",
-    description:
-      "Every guest's journey, achievements, business and industry is researched thoroughly before content is curated,creating meaningful conversations, not generic interviews.",
-  },
-  {
-    icon: <TrendingUp className="w-6 h-6 text-yellow-400" />,
-    title: "Long-Term Content Asset",
-    description:
-      "We don't treat episodes as a one-time event. Our team thoughtfully repurposes content across multiple platforms to keep your visibility growing over time.",
-  },
-  {
-    icon: <ClipboardList className="w-6 h-6 text-yellow-400" />,
-    title: "End-to-End Management",
-    description:
-      "From research and content strategy to scheduling, production, post-production and delivery,our team handles everything so you focus only on the conversation.",
-  },
-  {
-    icon: <Globe className="w-6 h-6 text-yellow-400" />,
-    title: "Pan-India Audience",
-    description:
-      "Guests from across India mean viewership isn't limited to one region,our audience spans the nation with a growing international base too.",
-  },
-  {
-    icon: <Tag className="w-6 h-6 text-yellow-400" />,
-    title: "Transparent Pricing",
-    description:
-      "Guests are quoted only the final amount upfront,no hidden costs, no surprise add-ons. Straightforward and honest from day one.",
-  },
+  { icon: Zap,          title: "Trigger Question-Based Format",  description: "Unlike traditional interviews, every conversation is curated around questions that trigger the audience, uncover real stories and lived experiences." },
+  { icon: Users,        title: "Premium Guest Portfolio",        description: "With 90+ podcast guests across industries, the platform has built credibility among professionals, founders, doctors and business leaders." },
+  { icon: Video,        title: "High-End Production Quality",    description: "We work exclusively with industry-standard studio spaces featuring premium audio and video equipment — no compromises on quality." },
+  { icon: Search,       title: "Deep & Customised Research",     description: "Every guest's journey, achievements, business and industry is researched thoroughly before content is curated, creating meaningful conversations, not generic interviews." },
+  { icon: TrendingUp,   title: "Long-Term Content Asset",        description: "We don't treat episodes as a one-time event. Our team thoughtfully repurposes content across multiple platforms to keep your visibility growing over time." },
+  { icon: ClipboardList,title: "End-to-End Management",          description: "From research and content strategy to scheduling, production, post-production and delivery — our team handles everything." },
+  { icon: Globe,        title: "Pan-India Audience",             description: "Guests from across India mean viewership isn't limited to one region — our audience spans the nation with a growing international base too." },
+  { icon: Tag,          title: "Transparent Pricing",            description: "Guests are quoted only the final amount upfront — no hidden costs, no surprise add-ons. Straightforward and honest from day one." },
 ];
 
 export default function CoreOffering() {
   return (
-    <section className="py-10 md:py-16 bg-[#101010]">
-      <div className="container mx-auto px-4 md:px-6 max-w-7xl">
+    <section className="bg-[#F8F8F8] py-16 md:py-24 border-t border-black/8">
+      <div className="max-w-[1200px] mx-auto px-6">
+        <p className="text-[11px] font-semibold tracking-[0.2em] uppercase text-primary mb-3">Why Us</p>
+        <h2 className="font-headline text-5xl md:text-7xl text-[#0A0A0A] leading-none mb-3">
+          Why Guests Choose<br />Masum Gandhi Podcast
+        </h2>
+        <p className="max-w-2xl text-[14px] leading-relaxed text-[#888] mb-10">
+          A platform built for real stories, real credibility and real results — here&apos;s what makes every guest&apos;s experience exceptional.
+        </p>
 
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-headline font-bold leading-tight">
-            <span className="text-white">Why Guests Choose </span>
-            <span className="text-yellow-400">Masum Gandhi Podcast</span>
-          </h2>
-          <div className="w-24 h-1 rounded-full bg-gradient-to-r from-yellow-400 to-purple-600 mx-auto mt-4 mb-4" />
-          <p className="max-w-2xl mx-auto text-white/60 font-accent text-base leading-relaxed">
-            A platform built for real stories, real credibility and real results,here's what makes every guest's experience exceptional.
-          </p>
-        </div>
-
-        {/* USP Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
-          {usps.map((usp, i) => (
-            <div
-              key={usp.title}
-              className="group relative bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-yellow-400/40 hover:-translate-y-1 transition-all duration-300"
-            >
-              {/* Number badge */}
-              <span className="absolute top-4 right-4 text-white/10 font-headline font-bold text-4xl select-none leading-none">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-
-              {/* Icon */}
-              <div className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-4 group-hover:border-yellow-400/30 transition-colors">
-                {usp.icon}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-black/8">
+          {usps.map((usp, i) => {
+            const Icon = usp.icon;
+            return (
+              <div key={usp.title} className="bg-[#F8F8F8] p-6 hover:bg-white transition-colors">
+                <p className="text-[11px] font-semibold text-primary mb-3">
+                  {String(i + 1).padStart(2, "0")}
+                </p>
+                <Icon className="w-5 h-5 text-primary mb-4" />
+                <h3 className="font-accent font-bold text-[#0A0A0A] text-[14px] mb-2 leading-snug">{usp.title}</h3>
+                <p className="text-[13px] text-[#888] leading-relaxed">{usp.description}</p>
               </div>
-
-              <h3 className="font-headline font-bold text-white text-base md:text-lg mb-2 leading-snug">
-                {usp.title}
-              </h3>
-              <p className="text-white/55 font-accent text-sm leading-relaxed">
-                {usp.description}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
-
       </div>
     </section>
   );

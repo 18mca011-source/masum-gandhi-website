@@ -1,73 +1,74 @@
 "use client";
 import { useState } from "react";
-import { Menu, X, Mic } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Our Guests", href: "#guests" },
   { label: "Episodes", href: "#episodes" },
-  { label: "Be a Guest", href: "#be-a-guest" },
-  { label: "Contact", href: "#contact" },
+  { label: "Guests",   href: "#guests" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full transition-all duration-300 bg-[#101010]/80 backdrop-blur-md border-b border-white/5">
-      <div className="container mx-auto flex h-24 items-center justify-between px-4 md:px-6">
+    <header className="sticky top-0 z-50 w-full bg-white border-b border-black/8">
+      <div className="max-w-[1200px] mx-auto flex h-16 items-center justify-between px-6">
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-2 md:gap-4">
-          <div className="p-2 md:p-3 bg-white/10 rounded-full">
-            <Mic className="h-6 w-6 text-white" />
-          </div>
-          <div className="flex flex-col">
-            <span className="text-2xl font-bold font-headline text-yellow-400 leading-tight">
-              Masum Gandhi
-            </span>
-            <span className="text-[10px] md:text-sm font-medium text-white/50 font-accent uppercase tracking-wider">
-              Podcast
-            </span>
+        <a href="#home" className="flex items-center gap-3">
+          <div className="w-9 h-9 bg-[#0A0A0A] rounded-[6px] flex items-center justify-center">
+            <span className="font-headline text-white text-[15px] leading-none">MG</span>
           </div>
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden items-center gap-6 md:flex">
+        <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 underline-offset-4 h-10 px-4 py-2 text-base font-bold text-white/80 hover:text-yellow-400 hover:no-underline transition-colors font-accent"
+              className="text-[13px] font-semibold text-[#0A0A0A] uppercase tracking-widest hover:text-primary transition-colors"
             >
               {link.label}
             </a>
           ))}
+          <a
+            href="#be-a-guest"
+            className="text-[13px] font-bold text-white bg-primary uppercase tracking-widest px-5 py-2.5 rounded hover:bg-primary-dim transition-colors"
+          >
+            Be a Guest
+          </a>
         </nav>
 
         {/* Mobile Hamburger */}
         <button
-          className="md:hidden p-2 text-white"
+          className="md:hidden p-2 text-[#0A0A0A]"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6 text-white" />}
+          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden bg-[#101010]/95 backdrop-blur-md border-t border-white/10 px-4 py-4 flex flex-col gap-2">
+        <div className="md:hidden bg-white border-t border-black/8 px-6 py-4 flex flex-col gap-1">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="py-3 px-4 text-white/80 hover:text-yellow-400 font-accent font-bold text-base transition-colors border-b border-white/5"
+              className="py-3 text-[13px] font-semibold text-[#0A0A0A] uppercase tracking-widest border-b border-black/5"
             >
               {link.label}
             </a>
           ))}
+          <a
+            href="#be-a-guest"
+            onClick={() => setOpen(false)}
+            className="mt-3 text-center text-[13px] font-bold text-white bg-primary uppercase tracking-widest px-5 py-3 rounded"
+          >
+            Be a Guest
+          </a>
         </div>
       )}
     </header>

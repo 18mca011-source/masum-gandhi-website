@@ -11,27 +11,20 @@ const categories = [
 
 export default function GuestsFrom() {
   return (
-    <section className="py-10 md:py-16 bg-[#101010]">
-      <div className="container mx-auto px-4 md:px-6">
-        {/* Title */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-headline font-bold text-white">
-            Guests <span className="text-yellow-400">From</span>
-          </h2>
-          <div className="w-16 h-1 rounded-full bg-gradient-to-r from-yellow-400 to-purple-600 mx-auto mt-4" />
-        </div>
-
-        {/* Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+    <section className="bg-white py-16 md:py-20 border-t border-black/8">
+      <div className="max-w-[1200px] mx-auto px-6">
+        <p className="text-[11px] font-semibold tracking-[0.2em] uppercase text-primary mb-3">Industries</p>
+        <h2 className="font-headline text-5xl md:text-7xl text-[#0A0A0A] leading-none mb-10">
+          Guests From
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {categories.map((cat) => (
             <div
               key={cat.label}
-              className="flex items-center gap-4 px-5 py-6 rounded-2xl bg-white/5 border border-white/10 hover:border-yellow-400/20 transition-all duration-300"
+              className="flex items-center gap-3 px-4 py-5 border border-black/10 hover:border-primary transition-colors"
             >
-              <span className="text-3xl md:text-4xl flex-shrink-0">{cat.emoji}</span>
-              <span className="font-headline font-bold text-white text-sm md:text-lg leading-snug">
-                {cat.label}
-              </span>
+              <span className="text-2xl flex-shrink-0">{cat.emoji}</span>
+              <span className="font-accent font-semibold text-[#0A0A0A] text-sm leading-snug">{cat.label}</span>
             </div>
           ))}
         </div>

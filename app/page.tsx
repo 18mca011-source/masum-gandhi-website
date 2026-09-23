@@ -17,15 +17,15 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="flex-grow overflow-x-hidden">
+      <main>
         <Hero />
         <About />
         <GuestsFrom />
         <CoreOffering />
         <HealthcareGuests />
         <ProductionTeam />
-        <section id="guests" className="py-16 md:py-24 bg-[#101010]">
-          <div className="container mx-auto px-4 md:px-6">
+        <section id="guests" className="bg-white py-16 md:py-24 border-t border-black/8">
+          <div className="max-w-[1200px] mx-auto px-6">
             <GuestCarousel title="Our Featured Guests" />
           </div>
         </section>
