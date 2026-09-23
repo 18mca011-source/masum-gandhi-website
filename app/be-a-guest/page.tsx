@@ -271,7 +271,7 @@ export default function BeAGuestPage() {
         </div>
 
       </main>
-      <Footer dark={true} />
+      <Footer dark={false} />
     </>
   );
 }
