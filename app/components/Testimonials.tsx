@@ -4,7 +4,7 @@ const testimonials = [
   {
     name: "Jinal Zaveri",
     role: "Mindset Coach, Founder: The Spiritual Ascend",
-    quote: "I had a really meaningful conversation with Masum on his podcast and truly enjoyed the experience. The questions were well thought out, flowed naturally, and allowed us to explore some deep and important topics with ease.",
+    quote: "I had a really meaningful conversation with Masum on his podcast and truly enjoyed the experience. The questions were well thought out, flowed naturally, and allowed us to explore some deep and important topics with ease. It was a smooth, engaging conversation, and I appreciate the intention and curiosity he brings as a host. I'd highly recommend his podcast to anyone who enjoys thoughtful discussions and real insights.",
   },
   {
     name: "Aditi Kulkarni",
