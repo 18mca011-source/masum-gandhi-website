@@ -37,7 +37,7 @@ export default function Footer({ dark = false }: { dark?: boolean }) {
 
   return (
     <footer style={{ background: "#111", borderTop: "1px solid #222" }}>
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-14">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-6 md:px-12 py-10 md:py-14">
         <div>
           <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(40px, 5vw, 72px)", lineHeight: 0.88, letterSpacing: "0.02em", color: "#fff" }}>Masum<br />Gandhi</div>
           <div style={{ marginTop: 10, fontSize: 11, fontWeight: 600, letterSpacing: "0.2em", textTransform: "uppercase" as const, color: "#555" }}>India&apos;s First Trigger-Question Podcast</div>
@@ -66,7 +66,7 @@ export default function Footer({ dark = false }: { dark?: boolean }) {
           <div style={{ fontSize: 13, color: "#999", marginTop: 6 }}>WhatsApp: <a href="https://wa.me/919773402508" target="_blank" rel="noopener noreferrer" style={{ color: "#E8151B" }}>+91 97734 02508</a></div>
         </div>
       </div>
-      <div className="max-w-[1200px] mx-auto" style={{ borderTop: "1px solid #222", margin: "0 auto", padding: "20px 48px", fontSize: 12, color: "#444", textAlign: "center" as const }}>
+      <div className="max-w-[1200px] mx-auto px-6 md:px-12" style={{ borderTop: "1px solid #222", padding: "20px 0", fontSize: 12, color: "#444", textAlign: "center" as const }}>
         © 2026 Masum Gandhi Podcast. All rights reserved.
       </div>
     </footer>

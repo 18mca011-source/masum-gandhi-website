@@ -66,9 +66,9 @@ const faqs = [
 ];
 
 const s = {
-  section: (bg: string, extra = {}) => ({ padding: "80px 48px", background: bg, borderTop: "1px solid #1a1a1a", ...extra } as React.CSSProperties),
+  section: (bg: string, extra = {}) => ({ background: bg, borderTop: "1px solid #1a1a1a", ...extra } as React.CSSProperties),
   eyebrow: { fontSize: 11, fontWeight: 700, letterSpacing: "0.25em", textTransform: "uppercase" as const, color: "#E8151B", marginBottom: 12 } as React.CSSProperties,
-  title: { fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(40px, 5vw, 64px)", color: "#fff", letterSpacing: "0.03em", marginBottom: 8 } as React.CSSProperties,
+  title: { fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(36px, 5vw, 64px)", color: "#fff", letterSpacing: "0.03em", marginBottom: 8 } as React.CSSProperties,
   yellow: { color: "#E8151B" } as React.CSSProperties,
   sub: { fontSize: 15, color: "#888", marginBottom: 48, lineHeight: 1.6 } as React.CSSProperties,
 };
@@ -82,8 +82,7 @@ export default function BeAGuestPage() {
       <main>
 
         {/* HERO */}
-        <div style={{ padding: "140px 48px 80px", maxWidth: 1200, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "center" }}
-          className="!grid-cols-1 md:!grid-cols-[1fr_1fr]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center max-w-[1200px] mx-auto px-6 md:px-12 pt-32 md:pt-36 pb-16 md:pb-20">
           <div>
             <div style={s.eyebrow}>Be a Guest</div>
             <h1 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(64px, 8vw, 112px)", lineHeight: 0.88, letterSpacing: "0.02em", color: "#fff", marginBottom: 24 }}>Share<br />Your<br />Story.</h1>
@@ -105,11 +104,11 @@ export default function BeAGuestPage() {
         </div>
 
         {/* GUESTS FROM */}
-        <section style={s.section("#0A0A0A")}>
+        <section style={s.section("#0A0A0A")} className="py-12 md:py-20 px-6 md:px-12">
           <div style={{ maxWidth: 1200, margin: "0 auto" }}>
             <div style={s.eyebrow}>Guest Categories</div>
             <h2 style={s.title}>Guests <span style={s.yellow}>From</span></h2>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 2, marginTop: 40 }}>
+            <div className="grid grid-cols-2 sm:grid-cols-4" style={{ gap: 2, marginTop: 40 }}>
               {categories.map((c) => (
                 <div key={c.label} style={{ background: "#1a1a1a", border: "1px solid #2a2a2a", padding: "28px 20px", display: "flex", flexDirection: "column", gap: 12 }}
                   className="hover:bg-[#222] transition-colors">
@@ -122,16 +121,16 @@ export default function BeAGuestPage() {
         </section>
 
         {/* HEALTHCARE */}
-        <section style={s.section("#111")}>
+        <section style={s.section("#111")} className="py-12 md:py-20 px-6 md:px-12">
           <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-            <div style={{ maxWidth: 680, marginBottom: 48 }}>
+            <div style={{ maxWidth: 680, marginBottom: 32 }}>
               <div style={s.eyebrow}>Featured Category</div>
               <h2 style={s.title}>A Platform Trusted by<br /><span style={s.yellow}>Healthcare Experts</span></h2>
               <p style={{ fontSize: 15, color: "#777", lineHeight: 1.7, marginTop: 16 }}>
                 Featuring in-depth conversations with leading healthcare professionals including gynecologists, psychiatrists, dentists, oncologists, and diabetes specialists offering credible insights on mental health, women&apos;s health, and lifestyle.
               </p>
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 3 }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3" style={{ gap: 3 }}>
               {doctors.map((doc) => (
                 <div key={doc.name} style={{ position: "relative", overflow: "hidden", aspectRatio: "4/5" }} className="group">
                   <Image src={doc.image} alt={doc.name} fill
@@ -150,13 +149,13 @@ export default function BeAGuestPage() {
         </section>
 
         {/* FEATURED GUESTS */}
-        <section style={s.section("#0A0A0A")} id="featured">
+        <section style={s.section("#0A0A0A")} id="featured" className="py-12 md:py-20 px-6 md:px-12">
           <div style={{ maxWidth: 1200, margin: "0 auto" }}>
             <div style={s.eyebrow}>Who&apos;s Been On</div>
             <h2 style={s.title}>Our Featured <span style={s.yellow}>Guests</span></h2>
 
             {/* Row 1: 3fr 2fr */}
-            <div style={{ display: "grid", gridTemplateColumns: "3fr 2fr", gap: 3 }}>
+            <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr]" style={{ gap: 3 }}>
               {[featured[0], featured[1]].map((g) => (
                 <div key={g.name} style={{ position: "relative", overflow: "hidden", aspectRatio: "4/3" }} className="group">
                   <Image src={g.image} alt={g.name} fill
@@ -173,7 +172,7 @@ export default function BeAGuestPage() {
             </div>
 
             {/* Row 2: 3 equal */}
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 3, marginTop: 3 }}>
+            <div className="grid grid-cols-1 sm:grid-cols-3" style={{ gap: 3, marginTop: 3 }}>
               {[featured[2], featured[3], featured[4]].map((g) => (
                 <div key={g.name} style={{ position: "relative", overflow: "hidden", aspectRatio: "4/3" }} className="group">
                   <Image src={g.image} alt={g.name} fill
@@ -213,7 +212,7 @@ export default function BeAGuestPage() {
         </section>
 
         {/* JOURNEY */}
-        <section style={s.section("#111")} id="journey">
+        <section style={s.section("#111")} id="journey" className="py-12 md:py-20 px-6 md:px-12">
           <div style={{ maxWidth: 860, margin: "0 auto" }}>
             <div style={s.eyebrow}>The Process</div>
             <h2 style={s.title}>Your Journey as <span style={s.yellow}>Our Guest</span></h2>
@@ -235,7 +234,7 @@ export default function BeAGuestPage() {
         </section>
 
         {/* FAQ */}
-        <section style={s.section("#0A0A0A")} id="faq">
+        <section style={s.section("#0A0A0A")} id="faq" className="py-12 md:py-20 px-6 md:px-12">
           <div style={{ maxWidth: 800, margin: "0 auto" }}>
             <div style={s.eyebrow}>Got Questions?</div>
             <h2 style={s.title}>Everything you need to <span style={s.yellow}>know</span></h2>
@@ -262,7 +261,7 @@ export default function BeAGuestPage() {
         <Testimonials />
 
         {/* CTA */}
-        <div style={{ background: "#E8151B", padding: "56px 48px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 32, flexWrap: "wrap" as const }}>
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 px-6 md:px-12 py-12 md:py-14" style={{ background: "#E8151B" }}>
           <div>
             <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(28px, 3.5vw, 48px)", color: "#fff", letterSpacing: "0.04em" }}>Ready to Share Your Story?</h2>
             <p style={{ fontSize: 14, color: "rgba(255,255,255,0.7)", marginTop: 6 }}>Book a discovery call with Masum and let&apos;s create something extraordinary together.</p>

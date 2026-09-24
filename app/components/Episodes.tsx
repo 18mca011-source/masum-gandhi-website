@@ -39,8 +39,8 @@ export default function Episodes() {
   const allLoaded = shown >= VIDEOS.length;
 
   return (
-    <section id="episodes" style={{ padding: "0 24px 64px", maxWidth: 1200, margin: "0 auto" }}>
-      <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", marginBottom: 24 }}>
+    <section id="episodes" className="px-4 md:px-6 pb-16" style={{ maxWidth: 1200, margin: "0 auto" }}>
+      <div className="flex flex-wrap items-baseline justify-between gap-2" style={{ marginBottom: 24 }}>
         <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 42, letterSpacing: "0.04em", color: "#fff" }}>
           Episodes<span style={{ color: "#E8151B" }}>.</span>
         </div>
@@ -49,7 +49,7 @@ export default function Episodes() {
         </div>
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 3 }}>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3" style={{ gap: 3 }}>
         {visible.map((v, i) => {
           const isFeatured = i === 0;
           const title = cleanTitle(v.title);
@@ -59,7 +59,7 @@ export default function Episodes() {
                 position: "relative", background: "#EBEBEB", overflow: "hidden",
                 cursor: "pointer", aspectRatio: isFeatured ? "32/10" : "16/10",
                 display: "flex", alignItems: "flex-end", textDecoration: "none",
-                gridColumn: isFeatured ? "span 2" : undefined,
+                gridColumn: isFeatured ? "span 1" : undefined,
               }}
               className="group"
             >

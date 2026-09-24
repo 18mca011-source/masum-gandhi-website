@@ -20,14 +20,14 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section style={{ background: "#0A0A0A", borderTop: "1px solid #222", padding: "64px 24px" }}>
-      <div className="max-w-[1200px] mx-auto px-6">
+    <section style={{ background: "#0A0A0A", borderTop: "1px solid #222" }} className="py-12 md:py-16 px-4 md:px-6">
+      <div className="max-w-[1200px] mx-auto">
         <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.2em", textTransform: "uppercase" as const, color: "#E8151B", marginBottom: 12 }}>Testimonials</p>
         <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(40px, 6vw, 72px)", color: "#fff", lineHeight: 1, marginBottom: 40 }}>
           What Guests Say
         </h2>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 3 }} className="grid-cols-1 md:!grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: 3 }}>
           {testimonials.map((t) => (
             <div key={t.name} style={{ background: "#111", padding: 28, transition: "background 0.2s" }} className="hover:bg-[#161616]">
               <div style={{ display: "flex", gap: 4, marginBottom: 20 }}>
