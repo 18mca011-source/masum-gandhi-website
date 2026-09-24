@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
     <section style={{ padding: "64px 24px 56px", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
-      <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(72px, 14vw, 180px)", lineHeight: 0.9, letterSpacing: "0.02em", color: "#0A0A0A" }}>
+      <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(72px, 14vw, 180px)", lineHeight: 0.9, letterSpacing: "0.02em", color: "#E8151B" }}>
         Masum Gandhi
       </div>
       <div style={{ marginTop: 20, fontSize: 13, fontWeight: 500, letterSpacing: "0.18em", textTransform: "uppercase" as const, color: "#555" }}>
