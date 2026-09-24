@@ -8,7 +8,7 @@ export default function Navbar({ logoRed = false }: { logoRed?: boolean }) {
   return (
     <header style={{ position: "sticky", top: 0, zIndex: 100, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 32px", height: 56, background: "rgba(10,10,10,0.92)", backdropFilter: "blur(12px)", borderBottom: "1px solid #222" }}>
       <a href="/" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
-        <div style={{ width: 34, height: 34, background: logoRed ? "#E8151B" : "#E8151B", borderRadius: 6, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Bebas Neue', sans-serif", fontSize: 18, color: "#fff", flexShrink: 0 }}>MG</div>
+        <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 28, color: "#E8151B", letterSpacing: "0.04em", lineHeight: 1, flexShrink: 0 }}>MG</div>
       </a>
 
       {/* Desktop */}
