@@ -20,25 +20,25 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-white py-16 md:py-24 border-t border-black/8">
+    <section style={{ background: "#0A0A0A", borderTop: "1px solid #222", padding: "64px 24px" }}>
       <div className="max-w-[1200px] mx-auto px-6">
-        <p className="text-[11px] font-semibold tracking-[0.2em] uppercase text-primary mb-3">Testimonials</p>
-        <h2 className="font-headline text-5xl md:text-7xl text-[#0A0A0A] leading-none mb-10">
+        <p style={{ fontSize: 11, fontWeight: 600, letterSpacing: "0.2em", textTransform: "uppercase" as const, color: "#E8151B", marginBottom: 12 }}>Testimonials</p>
+        <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(40px, 6vw, 72px)", color: "#fff", lineHeight: 1, marginBottom: 40 }}>
           What Guests Say
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-[3px] bg-black/8">
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 3 }} className="grid-cols-1 md:!grid-cols-3">
           {testimonials.map((t) => (
-            <div key={t.name} className="bg-white p-7 hover:bg-[#F8F8F8] transition-colors">
-              <div className="flex gap-0.5 mb-5">
+            <div key={t.name} style={{ background: "#111", padding: 28, transition: "background 0.2s" }} className="hover:bg-[#161616]">
+              <div style={{ display: "flex", gap: 4, marginBottom: 20 }}>
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-3.5 h-3.5 fill-primary text-primary" />
+                  <Star key={i} style={{ width: 14, height: 14, fill: "#E8151B", color: "#E8151B" }} />
                 ))}
               </div>
-              <p className="text-[14px] text-[#555] leading-relaxed mb-6">&ldquo;{t.quote}&rdquo;</p>
-              <div className="border-t border-black/8 pt-5">
-                <p className="font-accent font-bold text-[#0A0A0A] text-[13px]">{t.name}</p>
-                <p className="text-[12px] text-[#888] mt-0.5">{t.role}</p>
+              <p style={{ fontSize: 14, color: "#888", lineHeight: 1.7, marginBottom: 24 }}>&ldquo;{t.quote}&rdquo;</p>
+              <div style={{ borderTop: "1px solid #222", paddingTop: 20 }}>
+                <p style={{ fontWeight: 700, color: "#fff", fontSize: 13 }}>{t.name}</p>
+                {t.role && <p style={{ fontSize: 12, color: "#555", marginTop: 4 }}>{t.role}</p>}
               </div>
             </div>
           ))}

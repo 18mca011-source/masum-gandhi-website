@@ -41,7 +41,7 @@ export default function Episodes() {
   return (
     <section id="episodes" style={{ padding: "0 24px 64px", maxWidth: 1200, margin: "0 auto" }}>
       <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", marginBottom: 24 }}>
-        <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 42, letterSpacing: "0.04em", color: "#0A0A0A" }}>
+        <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 42, letterSpacing: "0.04em", color: "#fff" }}>
           Episodes<span style={{ color: "#E8151B" }}>.</span>
         </div>
         <div style={{ fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase" as const, color: "#555" }}>
@@ -82,8 +82,8 @@ export default function Episodes() {
           if (allLoaded) window.open("https://www.youtube.com/@masumngandhi/videos", "_blank");
           else setShown(s => Math.min(s + PAGE_SIZE, VIDEOS.length));
         }}
-        style={{ display: "block", margin: "20px auto 0", padding: "12px 32px", background: "transparent", border: "1px solid #D8D8D8", color: "#0A0A0A", fontSize: 12, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase" as const, cursor: "pointer", fontFamily: "inherit" }}
-        className="hover:border-black hover:text-[#E8151B] transition-colors"
+        style={{ display: "block", margin: "20px auto 0", padding: "12px 32px", background: "transparent", border: "1px solid #333", color: "#fff", fontSize: 12, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase" as const, cursor: "pointer", fontFamily: "inherit" }}
+        className="hover:border-white hover:text-[#E8151B] transition-colors"
       >
         {allLoaded ? "View All on YouTube →" : "Show More Episodes"}
       </button>

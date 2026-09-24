@@ -21,8 +21,8 @@
   html { scroll-behavior: smooth; }
 
   body {
-    background-color: #ffffff;
-    color: #0A0A0A;
+    background-color: #0A0A0A;
+    color: #ffffff;
     font-family: "Inter", sans-serif;
     -webkit-font-smoothing: antialiased;
   }
@@ -40,6 +40,6 @@
   .scrollbar-hide::-webkit-scrollbar { display: none; }
   .footer-listen-link { color: #aaa; text-decoration: none; font-size: 15px; transition: color 0.2s; }
   .footer-listen-link:hover { color: #E8151B; }
-  .footer-social-btn { width: 42px; height: 42px; border-radius: 50%; background: #E5E5E5; display: flex; align-items: center; justify-content: center; color: #888; text-decoration: none; font-size: 13px; transition: background 0.2s, color 0.2s; flex-shrink: 0; }
-  .footer-social-btn:hover { background: #E8151B; color: #fff; }
+  .footer-social-btn { width: 42px; height: 42px; border-radius: 50%; background: #1a1a1a; border: 1px solid #333; display: flex; align-items: center; justify-content: center; color: #888; text-decoration: none; font-size: 13px; transition: background 0.2s, color 0.2s, border-color 0.2s; flex-shrink: 0; }
+  .footer-social-btn:hover { background: #E8151B; color: #fff; border-color: #E8151B; }
 }

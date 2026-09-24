@@ -78,7 +78,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" style={{ scrollBehavior: "smooth" }}>
-      <body className="font-body antialiased min-h-screen flex flex-col bg-white overflow-x-hidden">
+      <body className="font-body antialiased min-h-screen flex flex-col bg-[#0A0A0A] overflow-x-hidden">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
