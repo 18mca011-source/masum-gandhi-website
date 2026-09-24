@@ -10,15 +10,15 @@ export default function Icon() {
         style={{
           width: 64,
           height: 64,
-          background: "transparent",
+          background: "#0A0A0A",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          fontFamily: "serif",
-          fontSize: 38,
+          fontFamily: "sans-serif",
+          fontSize: 32,
           fontWeight: 900,
           color: "#E8151B",
-          letterSpacing: 2,
+          letterSpacing: 3,
         }}
       >
         MG
