@@ -6,7 +6,7 @@ export default function CTA() {
         <p style={{ marginTop: 6, fontSize: 14, color: "rgba(255,255,255,0.7)" }}>Join 90+ industry leaders who&apos;ve shared their story with 52k+ listeners across India.</p>
       </div>
       <a href="https://calendly.com/masumgandhi/30min" target="_blank" rel="noopener noreferrer"
-        style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#fff", color: "#000", padding: "14px 28px", fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" as const, textDecoration: "none", whiteSpace: "nowrap" as const }}
+        style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#000", color: "#fff", padding: "14px 28px", fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" as const, textDecoration: "none", whiteSpace: "nowrap" as const }}
         className="hover:opacity-85 transition-opacity">
         Book Your Session →
       </a>
