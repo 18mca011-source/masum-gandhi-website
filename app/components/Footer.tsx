@@ -25,7 +25,7 @@ export default function Footer({ dark = false }: { dark?: boolean }) {
                   className="hover:border-[#E8151B] hover:text-[#E8151B] transition-colors">{label}</a>
               ))}
             </div>
-            <div style={{ fontSize: 12, color: "#555" }}>Partnerships: connect.masumgandhi@gmail.com</div>
+            <div style={{ fontSize: 12, color: "#555" }}>Sponsors: connect.masumgandhi@gmail.com</div>
           </div>
         </div>
         <div className="max-w-[1200px] mx-auto px-12" style={{ borderTop: "1px solid #1a1a1a", padding: "20px 48px", fontSize: 12, color: "#333", textAlign: "center" as const }}>
@@ -62,7 +62,7 @@ export default function Footer({ dark = false }: { dark?: boolean }) {
               <a key={href} href={href} target="_blank" rel="noopener noreferrer" className="footer-social-btn">{icon}</a>
             ))}
           </div>
-          <div style={{ fontSize: 13, color: "#999" }}>Partnerships: <a href="mailto:connect.masumgandhi@gmail.com" style={{ color: "#E8151B" }}>connect.masumgandhi@gmail.com</a></div>
+          <div style={{ fontSize: 13, color: "#999" }}>Sponsors: <a href="mailto:connect.masumgandhi@gmail.com" style={{ color: "#E8151B" }}>connect.masumgandhi@gmail.com</a></div>
           <div style={{ fontSize: 13, color: "#999", marginTop: 6 }}>WhatsApp: <a href="https://wa.me/919773402508" target="_blank" rel="noopener noreferrer" style={{ color: "#E8151B" }}>+91 97734 02508</a></div>
         </div>
       </div>
