@@ -267,7 +267,7 @@ export default function BeAGuestPage() {
             <p style={{ fontSize: 14, color: "rgba(255,255,255,0.7)", marginTop: 6 }}>Book a discovery call with Masum and let&apos;s create something extraordinary together.</p>
           </div>
           <a href="https://calendly.com/masumgandhi/30min" target="_blank" rel="noopener noreferrer"
-            style={{ flexShrink: 0, background: "#fff", color: "#000", fontWeight: 700, fontSize: 13, letterSpacing: "0.08em", textTransform: "uppercase", padding: "14px 28px", borderRadius: 2, textDecoration: "none", whiteSpace: "nowrap" }}
+            style={{ flexShrink: 0, background: "#000", color: "#fff", fontWeight: 700, fontSize: 13, letterSpacing: "0.08em", textTransform: "uppercase", padding: "14px 28px", borderRadius: 2, textDecoration: "none", whiteSpace: "nowrap" }}
             className="hover:opacity-85 transition-opacity">
             Schedule Your Session →
           </a>
