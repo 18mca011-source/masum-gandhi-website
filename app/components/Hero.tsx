@@ -5,10 +5,10 @@ export default function Hero() {
         Masum Gandhi
       </div>
       <div style={{ marginTop: 20, fontSize: 13, fontWeight: 500, letterSpacing: "0.18em", textTransform: "uppercase" as const, color: "#aaa" }}>
-        India&apos;s First Trigger-Question Podcast
+        The Founder&apos;s Truth.
       </div>
-      <p style={{ marginTop: 14, maxWidth: 480, fontSize: 15, lineHeight: 1.6, color: "#666" }}>
-        Conversations with founders, healthcare experts, creators, and industry leaders that uncover real stories.
+      <p style={{ marginTop: 14, maxWidth: 520, fontSize: 15, lineHeight: 1.6, color: "#666" }}>
+        Welcome to the Masum Gandhi Podcast, where I discuss business, healthcare, and the unfiltered reality of success with India&apos;s most fascinating minds.
       </p>
       <div style={{ marginTop: 32, display: "flex", flexWrap: "wrap" as const, gap: 10, justifyContent: "center" }}>
         <a href="https://www.youtube.com/@masumngandhi" target="_blank" rel="noopener noreferrer"
