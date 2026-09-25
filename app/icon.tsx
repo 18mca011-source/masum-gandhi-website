@@ -3,7 +3,11 @@ import { ImageResponse } from "next/og";
 export const size = { width: 64, height: 64 };
 export const contentType = "image/png";
 
-export default function Icon() {
+export default async function Icon() {
+  const fontData = await fetch(
+    "https://fonts.gstatic.com/s/bebasneuepro/v6/CNz9x_HfkLp0Zm8r3FWH-RbcS2OqMFCRVBQKTQ.woff2"
+  ).then((res) => res.arrayBuffer()).catch(() => null);
+
   return new ImageResponse(
     (
       <div
@@ -13,16 +17,21 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          fontFamily: "sans-serif",
-          fontSize: 34,
+          fontFamily: fontData ? "Bebas Neue" : "sans-serif",
+          fontSize: 36,
           fontWeight: 900,
           color: "#E8151B",
-          letterSpacing: 3,
+          letterSpacing: 2,
         }}
       >
         MG
       </div>
     ),
-    { ...size }
+    {
+      ...size,
+      ...(fontData ? {
+        fonts: [{ name: "Bebas Neue", data: fontData, style: "normal" }],
+      } : {}),
+    }
   );
 }
