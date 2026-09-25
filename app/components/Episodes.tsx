@@ -44,8 +44,7 @@ export default function Episodes() {
         <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 42, letterSpacing: "0.04em", color: "#fff" }}>
           Episodes<span style={{ color: "#E8151B" }}>.</span>
         </div>
-        <div style={{ fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase" as const, color: "#555" }}
-          className="hover:text-[#E8151B] transition-colors cursor-default">
+        <div style={{ fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase" as const, color: "#E8151B" }}>
           Tap an episode to listen
         </div>
       </div>
