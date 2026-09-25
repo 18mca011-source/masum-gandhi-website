@@ -46,11 +46,11 @@ const categories = [
 ];
 
 const steps = [
-  { n: "01", title: "Pre-Interview Preparation",   desc: "We discuss your story, key messages, and create a comfortable recording plan tailored to you." },
-  { n: "02", title: "Content & Story Planning",    desc: "Our content team connects with you to craft compelling talking points and narratives that resonate." },
-  { n: "03", title: "Professional Recording",      desc: "Record in our premium studio with top-tier equipment and expert guidance throughout." },
-  { n: "04", title: "Premium Editing",             desc: "Our editors polish every frame to create a cinematic final product you'll be proud of." },
-  { n: "05", title: "Strategic Promotion",         desc: "Amplify your message across our 52k+ community on Instagram, YouTube, and LinkedIn and beyond." },
+  { n: "01", title: "Discovery Call",              desc: "A quick 15-minute introductory call to understand your journey, core expertise, and the key messages you want to share with the audience." },
+  { n: "02", title: "Content & Prep",              desc: "Within 48 hours, our research team will share a structured outline and trigger points so you feel completely confident and prepared for the conversation." },
+  { n: "03", title: "The Shoot",                   desc: "A relaxed, unscripted deep conversation recorded at a collaborative studio space in Ahmedabad (or via a high-quality remote setup)." },
+  { n: "04", title: "Premium Editing",             desc: "Our post-production team handles the heavy lifting, delivering cinematic multi-cam cuts and crisp audio mastering that meets industry standards." },
+  { n: "05", title: "Episode Drop & Promotion",    desc: "The final episode and high-retention promotional reels go live directly across our platforms to strategically amplify your reach and visibility." },
 ];
 
 const faqs = [
