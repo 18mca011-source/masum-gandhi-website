@@ -4,7 +4,7 @@ export default function Hero() {
       <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(72px, 14vw, 180px)", lineHeight: 0.9, letterSpacing: "0.02em", color: "#E8151B" }}>
         Masum Gandhi
       </div>
-      <div style={{ marginTop: 20, fontFamily: "'Playfair Display', serif", fontSize: 15, fontWeight: 600, letterSpacing: "0.22em", textTransform: "uppercase" as const, color: "#aaa" }}>
+      <div style={{ marginTop: 20, fontFamily: "'Playfair Display', serif", fontSize: 15, fontWeight: 600, letterSpacing: "0.22em", textTransform: "uppercase" as const, color: "#fff" }}>
         The Founder&apos;s Truth.
       </div>
       <p style={{ marginTop: 14, maxWidth: 520, fontFamily: "'Playfair Display', serif", fontSize: 15, lineHeight: 1.7, color: "#666", fontStyle: "italic" as const }}>
