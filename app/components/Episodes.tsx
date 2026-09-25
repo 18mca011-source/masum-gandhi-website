@@ -44,33 +44,32 @@ export default function Episodes() {
         <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 42, letterSpacing: "0.04em", color: "#fff" }}>
           Episodes<span style={{ color: "#E8151B" }}>.</span>
         </div>
-        <div style={{ fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase" as const, color: "#555" }}>
+        <div style={{ fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase" as const, color: "#555" }}
+          className="hover:text-[#E8151B] transition-colors cursor-default">
           Tap an episode to listen
         </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3" style={{ gap: 3 }}>
         {visible.map((v, i) => {
-          const isFeatured = i === 0;
           const title = cleanTitle(v.title);
           return (
             <a key={v.id} href={v.url} target="_blank" rel="noopener noreferrer"
-              style={{
-                position: "relative", background: "#EBEBEB", overflow: "hidden",
-                cursor: "pointer", aspectRatio: isFeatured ? "32/10" : "16/10",
-                display: "flex", alignItems: "flex-end", textDecoration: "none",
-                gridColumn: isFeatured ? "span 1" : undefined,
-              }}
+              style={{ display: "flex", flexDirection: "column", textDecoration: "none", background: "#111", cursor: "pointer" }}
               className="group"
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={v.thumb} alt={title} loading="lazy"
-                style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.45)", transition: "filter .3s, transform .4s" }}
-                className="group-hover:brightness-[0.3] group-hover:scale-[1.04]" />
-              <div style={{ position: "relative", zIndex: 2, padding: 16, width: "100%", background: "linear-gradient(to top, rgba(0,0,0,0.92) 0%, transparent 100%)" }}>
-                <div style={{ fontSize: isFeatured ? 15 : 13, fontWeight: 600, lineHeight: 1.35, color: "#fff", marginBottom: 5, display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical" as const, overflow: "hidden" }}>{title}</div>
+              {/* Thumbnail */}
+              <div style={{ position: "relative", overflow: "hidden", aspectRatio: "16/9", flexShrink: 0 }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={v.thumb} alt={title} loading="lazy"
+                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block", transition: "transform .4s" }}
+                  className="group-hover:scale-[1.04]" />
+              </div>
+              {/* Text below image */}
+              <div style={{ padding: "12px 14px 14px" }}>
+                <div style={{ fontSize: 13, fontWeight: 600, lineHeight: 1.4, color: "#fff", marginBottom: 6, display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical" as const, overflow: "hidden" }}
+                  className="group-hover:text-[#E8151B] transition-colors">{title}</div>
                 <div style={{ fontSize: 11, color: "#555" }}>{v.published}</div>
-                <div className="hidden group-hover:block" style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase" as const, color: "#E8151B", marginTop: 6 }}>Watch on YouTube →</div>
               </div>
             </a>
           );
