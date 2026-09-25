@@ -7,7 +7,7 @@ export default function Hero() {
       <div style={{ marginTop: 20, fontFamily: "'Playfair Display', serif", fontSize: 15, fontWeight: 600, letterSpacing: "0.22em", textTransform: "uppercase" as const, color: "#fff" }}>
         The Founder&apos;s Truth.
       </div>
-      <p style={{ marginTop: 14, maxWidth: 520, fontFamily: "'Playfair Display', serif", fontSize: 15, lineHeight: 1.7, color: "#666" }}>
+      <p style={{ marginTop: 14, maxWidth: 520, fontFamily: "'Inter', sans-serif", fontSize: 15, lineHeight: 1.7, color: "#666" }}>
         Welcome to the Masum Gandhi Podcast, where I discuss business, healthcare, and the unfiltered reality of success with India&apos;s most fascinating minds.
       </p>
       <div style={{ marginTop: 32, display: "flex", flexWrap: "wrap" as const, gap: 10, justifyContent: "center" }}>
