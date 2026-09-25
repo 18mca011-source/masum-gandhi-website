@@ -103,23 +103,6 @@ export default function BeAGuestPage() {
           </div>
         </div>
 
-        {/* GUESTS FROM */}
-        <section style={s.section("#0A0A0A")} className="py-12 md:py-20 px-6 md:px-12">
-          <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-            <div style={s.eyebrow}>Guest Categories</div>
-            <h2 style={s.title}>Guests <span style={s.yellow}>From</span></h2>
-            <div className="grid grid-cols-2 sm:grid-cols-4" style={{ gap: 2, marginTop: 40 }}>
-              {categories.map((c) => (
-                <div key={c.label} style={{ background: "#1a1a1a", border: "1px solid #2a2a2a", padding: "28px 20px", display: "flex", flexDirection: "column", gap: 12 }}
-                  className="hover:bg-[#222] transition-colors">
-                  <span style={{ fontSize: 28, lineHeight: 1 }}>{c.emoji}</span>
-                  <span style={{ fontSize: 13, fontWeight: 500, color: "#aaa", lineHeight: 1.4 }}>{c.label}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* HEALTHCARE */}
         <section style={s.section("#111")} className="py-12 md:py-20 px-6 md:px-12">
           <div style={{ maxWidth: 1200, margin: "0 auto" }}>
@@ -142,6 +125,23 @@ export default function BeAGuestPage() {
                     <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 24, color: "#fff", letterSpacing: "0.04em", lineHeight: 1 }}>{doc.name}</div>
                     <div style={{ fontSize: 12, color: "#aaa", marginTop: 5 }}>{doc.role}</div>
                   </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* GUESTS FROM */}
+        <section style={s.section("#0A0A0A")} className="py-12 md:py-20 px-6 md:px-12">
+          <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+            <div style={s.eyebrow}>Guest Categories</div>
+            <h2 style={s.title}>Guests <span style={s.yellow}>From</span></h2>
+            <div className="grid grid-cols-2 sm:grid-cols-4" style={{ gap: 2, marginTop: 40 }}>
+              {categories.map((c) => (
+                <div key={c.label} style={{ background: "#1a1a1a", border: "1px solid #2a2a2a", padding: "28px 20px", display: "flex", flexDirection: "column", gap: 12 }}
+                  className="hover:bg-[#222] transition-colors">
+                  <span style={{ fontSize: 28, lineHeight: 1 }}>{c.emoji}</span>
+                  <span style={{ fontSize: 13, fontWeight: 500, color: "#aaa", lineHeight: 1.4 }}>{c.label}</span>
                 </div>
               ))}
             </div>
