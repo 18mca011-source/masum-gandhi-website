@@ -44,11 +44,9 @@ export default function Episodes() {
         <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 42, letterSpacing: "0.04em", color: "#fff" }}>
           Episodes<span style={{ color: "#E8151B" }}>.</span>
         </div>
-        <a href="https://www.youtube.com/@masumngandhi/videos" target="_blank" rel="noopener noreferrer"
-          style={{ fontSize: 11, letterSpacing: "0.1em", textTransform: "uppercase" as const, color: "#E8151B", textDecoration: "none" }}
-          className="hover:underline">
-          Tap an episode to listen →
-        </a>
+        <div style={{ fontSize: 13, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#E8151B", fontWeight: 700 }}>
+          Tap an episode to listen
+        </div>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3" style={{ gap: 3 }}>
