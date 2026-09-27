@@ -2,7 +2,8 @@
 import { useState } from "react";
 
 const VIDEOS = [
-  { id: "h60IAc_n-eg", title: 'EP089 | Cancer Surgeon Warning: "Gutkha Is Secretly Killing You" | Dr Shivam Pandya | Masum Gandhi', url: "https://www.youtube.com/watch?v=h60IAc_n-eg", thumb: "https://i.ytimg.com/vi/h60IAc_n-eg/maxresdefault.jpg", published: "9d ago" },
+  { id: "99h7g43tK7c", title: "EP090 | REVERSE Diabetes Permanently Without Pills | Metabolic Health Expert Anup Singh Explains | Masum Gandhi", url: "https://www.youtube.com/watch?v=99h7g43tK7c", thumb: "https://i.ytimg.com/vi/99h7g43tK7c/maxresdefault.jpg", published: "1d ago" },
+  { id: "h60IAc_n-eg", title: 'EP089 | Cancer Surgeon Warning: "Gutkha Is Secretly Killing You" | Dr Shivam Pandya | Masum Gandhi', url: "https://www.youtube.com/watch?v=h60IAc_n-eg", thumb: "https://i.ytimg.com/vi/h60IAc_n-eg/maxresdefault.jpg", published: "2w ago" },
   { id: "87ghB-zQ1Co", title: "EP088 | Top Paediatrician Explains: What Your Baby Really Needs | Dr. Devendra | Masum Gandhi", url: "https://www.youtube.com/watch?v=87ghB-zQ1Co", thumb: "https://i.ytimg.com/vi/87ghB-zQ1Co/maxresdefault.jpg", published: "2w ago" },
   { id: "LPTttRQO2cM", title: "EP087 | Autism Treatments Exposed: Ayurveda Can Reverse Autism Symptoms? | Partha M. | Masum Gandhi", url: "https://www.youtube.com/watch?v=LPTttRQO2cM", thumb: "https://i.ytimg.com/vi/LPTttRQO2cM/maxresdefault.jpg", published: "3w ago" },
   { id: "xJUBslGT2RE", title: "EP086 | Celebrity Dermatologist's ADVICE: How Celebrities Actually Look So Young | Dr.Shuba D.", url: "https://www.youtube.com/watch?v=xJUBslGT2RE", thumb: "https://i.ytimg.com/vi/xJUBslGT2RE/maxresdefault.jpg", published: "3mo ago" },
