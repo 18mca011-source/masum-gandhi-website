@@ -57,29 +57,23 @@ export default function Team() {
               </div>
             </div>
 
-            {/* Connector + horizontal line */}
+            {/* Connector line down */}
             <div style={{ width: 1, height: 36, background: "#333" }} />
-            <div style={{ width: "100%", height: 1, background: "#222", position: "relative" }}>
-              {/* vertical drops at each column */}
-            </div>
 
-            {/* ROLES GRID */}
-            <div style={{ width: "100%", position: "relative" }}>
-              {/* Top border line */}
-              <div style={{ position: "absolute", top: 0, left: "6%", right: "6%", height: 1, background: "#2a2a2a" }} />
+            {/* Horizontal spanning line */}
+            <div style={{ width: "100%", position: "relative", display: "flex", justifyContent: "center" }}>
+              <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 1, background: "#2a2a2a" }} />
 
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4" style={{ gap: 3, paddingTop: 36, position: "relative" }}>
-                {/* Connector dots */}
+              {/* Vertical drops + cards */}
+              <div style={{ width: "100%", display: "flex", gap: 3, alignItems: "flex-start" }}>
                 {teamRoles.map((role) => (
-                  <div key={role} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 0 }}>
-                    {/* Dot + line */}
-                    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", marginBottom: 0 }}>
-                      <div style={{ width: 1, height: 24, background: "#2a2a2a" }} />
-                      <div style={{ width: 7, height: 7, borderRadius: "50%", background: "#E8151B" }} />
-                    </div>
+                  <div key={role} style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center" }}>
+                    {/* Drop line + dot */}
+                    <div style={{ width: 1, height: 24, background: "#2a2a2a" }} />
+                    <div style={{ width: 7, height: 7, borderRadius: "50%", background: "#E8151B", marginBottom: 8 }} />
                     {/* Card */}
-                    <div style={{ width: "100%", background: "#111", border: "1px solid #1e1e1e", padding: "18px 14px", textAlign: "center" }}>
-                      <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#aaa", lineHeight: 1.5 }}>
+                    <div style={{ width: "100%", background: "#111", border: "1px solid #1e1e1e", padding: "16px 8px", textAlign: "center" }}>
+                      <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: "#aaa", lineHeight: 1.5 }}>
                         {role}
                       </div>
                     </div>
