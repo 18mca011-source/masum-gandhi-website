@@ -15,7 +15,7 @@ export default function Navbar({ logoRed = false }: { logoRed?: boolean }) {
       <nav className="hidden md:flex" style={{ alignItems: "center", gap: 8 }}>
         <a href="/#episodes" style={{ textDecoration: "none", fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", padding: "7px 14px", borderRadius: 4 }} className="text-white hover:text-[#E8151B] transition-colors">Episodes</a>
         <a href="/be-a-guest" style={{ textDecoration: "none", fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", padding: "7px 14px", borderRadius: 4 }} className="text-white hover:text-[#E8151B] transition-colors">Guests</a>
-        <a href="/work-with-me" style={{ textDecoration: "none", fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", padding: "7px 14px", borderRadius: 4 }} className="text-white hover:text-[#E8151B] transition-colors">Work With Me</a>
+        <a href="/work-with-me" style={{ textDecoration: "none", fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", padding: "7px 14px", borderRadius: 4 }} className="text-white hover:text-[#E8151B] transition-colors">Careers</a>
         <a href="/be-a-guest" style={{ textDecoration: "none", fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", background: "#E8151B", color: "#fff", padding: "7px 16px", borderRadius: 4 }} className="hover:bg-[#b50f14] transition-colors">Be a Guest</a>
       </nav>
 
@@ -28,7 +28,7 @@ export default function Navbar({ logoRed = false }: { logoRed?: boolean }) {
         <div className="md:hidden" style={{ position: "absolute", top: 56, left: 0, right: 0, background: "rgba(10,10,10,0.98)", borderBottom: "1px solid #222", padding: "12px 32px 16px", display: "flex", flexDirection: "column", gap: 4 }}>
           <a href="/#episodes" onClick={() => setOpen(false)} style={{ padding: "12px 0", fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", borderBottom: "1px solid #222" }} className="text-white hover:text-[#E8151B] transition-colors">Episodes</a>
           <a href="/be-a-guest" onClick={() => setOpen(false)} style={{ padding: "12px 0", fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", borderBottom: "1px solid #222" }} className="text-white hover:text-[#E8151B] transition-colors">Guests</a>
-          <a href="/work-with-me" onClick={() => setOpen(false)} style={{ padding: "12px 0", fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", borderBottom: "1px solid #222" }} className="text-white hover:text-[#E8151B] transition-colors">Work With Me</a>
+          <a href="/work-with-me" onClick={() => setOpen(false)} style={{ padding: "12px 0", fontSize: 11, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", borderBottom: "1px solid #222" }} className="text-white hover:text-[#E8151B] transition-colors">Careers</a>
           <a href="/be-a-guest" onClick={() => setOpen(false)} style={{ marginTop: 8, textAlign: "center", fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.12em", background: "#E8151B", color: "#fff", padding: "12px", borderRadius: 4 }}>Be a Guest</a>
         </div>
       )}
