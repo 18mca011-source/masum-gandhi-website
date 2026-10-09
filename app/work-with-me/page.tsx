@@ -61,38 +61,40 @@ export default function WorkWithMe() {
         </section>
 
         {/* ROLES */}
-        <section style={{ background: "#0A0A0A", padding: "0 24px 80px" }}>
+        <section style={{ background: "#0A0A0A", padding: "0 24px 60px" }}>
           <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-            <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: 3 }}>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3" style={{ gap: 3 }}>
               {roles.map((role) => (
-                <div key={role.title} style={{ background: "#111", border: "1px solid #1e1e1e", padding: "32px 28px 28px", display: "flex", flexDirection: "column", gap: 16 }}>
-                  <div style={{ fontSize: 32 }}>{role.emoji}</div>
-                  <div>
-                    <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 28, letterSpacing: "0.04em", color: "#fff", margin: 0, lineHeight: 1 }}>
-                      {role.title}
-                    </h2>
-                    <p style={{ marginTop: 10, fontFamily: "'Inter', sans-serif", fontSize: 14, lineHeight: 1.7, color: "#777" }}>
-                      {role.desc}
-                    </p>
-                  </div>
-                  <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                <div key={role.title} style={{ background: "#111", border: "1px solid #1e1e1e", padding: "28px 22px 24px", display: "flex", flexDirection: "column", gap: 12 }}>
+                  <div style={{ fontSize: 28 }}>{role.emoji}</div>
+                  <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 24, letterSpacing: "0.04em", color: "#fff", margin: 0, lineHeight: 1 }}>
+                    {role.title}
+                  </h2>
+                  <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 13, lineHeight: 1.7, color: "#777", margin: 0 }}>
+                    {role.desc}
+                  </p>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: 5, marginTop: "auto" }}>
                     {role.skills.map((s) => (
-                      <span key={s} style={{ fontSize: 11, fontFamily: "'Inter', sans-serif", fontWeight: 600, letterSpacing: "0.06em", padding: "4px 10px", border: "1px solid #2a2a2a", color: "#555", textTransform: "uppercase" }}>
+                      <span key={s} style={{ fontSize: 10, fontFamily: "'Inter', sans-serif", fontWeight: 600, letterSpacing: "0.06em", padding: "3px 8px", border: "1px solid #2a2a2a", color: "#555", textTransform: "uppercase" }}>
                         {s}
                       </span>
                     ))}
                   </div>
-                  <a
-                    href={FORM_LINK}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{ marginTop: 8, display: "inline-block", padding: "12px 24px", background: "#E8151B", color: "#fff", fontFamily: "'Inter', sans-serif", fontSize: 12, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", alignSelf: "flex-start", transition: "opacity 0.2s" }}
-                    className="hover:opacity-80"
-                  >
-                    Apply Now →
-                  </a>
                 </div>
               ))}
+            </div>
+
+            {/* Common Apply Button */}
+            <div style={{ textAlign: "center", marginTop: 40 }}>
+              <a
+                href={FORM_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: "inline-block", padding: "16px 48px", background: "#E8151B", color: "#fff", fontFamily: "'Inter', sans-serif", fontSize: 13, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none" }}
+                className="hover:opacity-80 transition-opacity"
+              >
+                Apply Now →
+              </a>
             </div>
           </div>
         </section>
