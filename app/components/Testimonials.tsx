@@ -16,6 +16,11 @@ const testimonials = [
     role: "",
     quote: "It was an amazing experience being on a podcast with Masum. He's doing fabulous work in his industry and has a great curiosity for learning. With many Shark Tank founders joining his podcast, he's truly making a mark. I highly recommend him!",
   },
+  {
+    name: "Sunith Reddy",
+    role: "Reimagining the way we live | Beforest Lifestyle Solutions",
+    quote: "I recently joined Masum Gandhi for a podcast conversation about Beforest Lifestyle Solutions. What stayed with me was his curiosity. He wanted to understand what happens on the land, and why we work the way we do. It brought me back to a question we keep testing through our collectives: can a landscape become healthier while also supporting livelihoods and community life? Thank you, Masum, for giving those questions room. I enjoyed the conversation and hope it prompts a few more.",
+  },
 ];
 
 export default function Testimonials() {
