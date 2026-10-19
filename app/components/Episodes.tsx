@@ -2,7 +2,8 @@
 import { useState } from "react";
 
 const VIDEOS = [
-  { id: "O2kj3b1Ld6A", title: "EP091 | How Sustainability Can Be a Big Business Opportunity | IIT Graduate Explains", url: "https://www.youtube.com/watch?v=O2kj3b1Ld6A", thumb: "https://i.ytimg.com/vi/O2kj3b1Ld6A/maxresdefault.jpg", published: "1d ago" },
+  { id: "RkCtiybQ1gA", title: "EP092 | CALORIE DEFICIT IS A SCAM? Why You Keep Gaining Weight Back, Experts Explain", url: "https://www.youtube.com/watch?v=RkCtiybQ1gA", thumb: "https://i.ytimg.com/vi/RkCtiybQ1gA/maxresdefault.jpg", published: "1d ago" },
+  { id: "O2kj3b1Ld6A", title: "EP091 | How Sustainability Can Be a Big Business Opportunity | IIT Graduate Explains", url: "https://www.youtube.com/watch?v=O2kj3b1Ld6A", thumb: "https://i.ytimg.com/vi/O2kj3b1Ld6A/maxresdefault.jpg", published: "1w ago" },
   { id: "99h7g43tK7c", title: "EP090 | REVERSE Diabetes Permanently Without Pills | Metabolic Health Expert Anup Singh Explains", url: "https://www.youtube.com/watch?v=99h7g43tK7c", thumb: "https://i.ytimg.com/vi/99h7g43tK7c/maxresdefault.jpg", published: "1w ago" },
   { id: "h60IAc_n-eg", title: 'EP089 | Cancer Surgeon Warning: "Gutkha Is Secretly Killing You" | Dr Shivam Pandya | Masum Gandhi', url: "https://www.youtube.com/watch?v=h60IAc_n-eg", thumb: "https://i.ytimg.com/vi/h60IAc_n-eg/maxresdefault.jpg", published: "2w ago" },
   { id: "87ghB-zQ1Co", title: "EP088 | Top Paediatrician Explains: What Your Baby Really Needs | Dr. Devendra | Masum Gandhi", url: "https://www.youtube.com/watch?v=87ghB-zQ1Co", thumb: "https://i.ytimg.com/vi/87ghB-zQ1Co/maxresdefault.jpg", published: "2w ago" },
