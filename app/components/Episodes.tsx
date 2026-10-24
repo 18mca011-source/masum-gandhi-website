@@ -2,7 +2,8 @@
 import { useState } from "react";
 
 const VIDEOS = [
-  { id: "RkCtiybQ1gA", title: "EP092 | CALORIE DEFICIT IS A SCAM? Why You Keep Gaining Weight Back, Experts Explain", url: "https://www.youtube.com/watch?v=RkCtiybQ1gA", thumb: "https://i.ytimg.com/vi/RkCtiybQ1gA/maxresdefault.jpg", published: "1d ago" },
+  { id: "h4O11luQ-3g", title: "EP092 | Whose Job Will AI Take Next? Ex-Google Employee Reveals", url: "https://www.youtube.com/watch?v=h4O11luQ-3g", thumb: "https://i.ytimg.com/vi/h4O11luQ-3g/maxresdefault.jpg", published: "1d ago" },
+  { id: "RkCtiybQ1gA", title: "EP091 | CALORIE DEFICIT IS A SCAM? Why You Keep Gaining Weight Back, Experts Explain", url: "https://www.youtube.com/watch?v=RkCtiybQ1gA", thumb: "https://i.ytimg.com/vi/RkCtiybQ1gA/maxresdefault.jpg", published: "1w ago" },
   { id: "O2kj3b1Ld6A", title: "EP091 | How Sustainability Can Be a Big Business Opportunity | IIT Graduate Explains", url: "https://www.youtube.com/watch?v=O2kj3b1Ld6A", thumb: "https://i.ytimg.com/vi/O2kj3b1Ld6A/maxresdefault.jpg", published: "1w ago" },
   { id: "99h7g43tK7c", title: "EP090 | REVERSE Diabetes Permanently Without Pills | Metabolic Health Expert Anup Singh Explains", url: "https://www.youtube.com/watch?v=99h7g43tK7c", thumb: "https://i.ytimg.com/vi/99h7g43tK7c/maxresdefault.jpg", published: "1w ago" },
   { id: "h60IAc_n-eg", title: 'EP089 | Cancer Surgeon Warning: "Gutkha Is Secretly Killing You" | Dr Shivam Pandya | Masum Gandhi', url: "https://www.youtube.com/watch?v=h60IAc_n-eg", thumb: "https://i.ytimg.com/vi/h60IAc_n-eg/maxresdefault.jpg", published: "2w ago" },
