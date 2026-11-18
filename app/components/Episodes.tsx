@@ -45,7 +45,7 @@ export default function Episodes() {
   return (
     <section id="episodes" className="px-4 md:px-6 pb-16" style={{ maxWidth: 1200, margin: "0 auto" }}>
       <div className="flex flex-wrap items-baseline justify-between gap-2" style={{ marginBottom: 24 }}>
-        <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 42, letterSpacing: "0.04em", color: "#fff" }}>
+        <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 42, letterSpacing: "0.04em", color: "#0A0A0A" }}>
           Episodes<span style={{ color: "#E8151B" }}>.</span>
         </div>
         <div style={{ fontSize: 13, letterSpacing: "0.12em", textTransform: "uppercase" as const, color: "#E8151B", fontWeight: 700 }}>
@@ -58,7 +58,7 @@ export default function Episodes() {
           const title = cleanTitle(v.title);
           return (
             <a key={v.id} href={v.url} target="_blank" rel="noopener noreferrer"
-              style={{ display: "flex", flexDirection: "column", textDecoration: "none", background: "#111", cursor: "pointer" }}
+              style={{ display: "flex", flexDirection: "column", textDecoration: "none", background: "#f5f5f5", cursor: "pointer", border: "1px solid #e5e5e5" }}
               className="group"
             >
               {/* Thumbnail */}
@@ -70,7 +70,7 @@ export default function Episodes() {
               </div>
               {/* Text below image */}
               <div style={{ padding: "12px 14px 14px" }}>
-                <div style={{ fontSize: 13, fontWeight: 600, lineHeight: 1.4, color: "#fff", marginBottom: 6, display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical" as const, overflow: "hidden" }}
+                <div style={{ fontSize: 13, fontWeight: 600, lineHeight: 1.4, color: "#0A0A0A", marginBottom: 6, display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical" as const, overflow: "hidden" }}
                   className="group-hover:text-[#E8151B] transition-colors">{title}</div>
                 <div style={{ fontSize: 11, color: "#555" }}>{v.published}</div>
               </div>
@@ -84,8 +84,8 @@ export default function Episodes() {
           if (allLoaded) window.open("https://www.youtube.com/@masumngandhi/videos", "_blank");
           else setShown(s => Math.min(s + PAGE_SIZE, VIDEOS.length));
         }}
-        style={{ display: "block", margin: "20px auto 0", padding: "12px 32px", background: "transparent", border: "1px solid #333", color: "#fff", fontSize: 12, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase" as const, cursor: "pointer", fontFamily: "inherit" }}
-        className="hover:border-white hover:text-[#E8151B] transition-colors"
+        style={{ display: "block", margin: "20px auto 0", padding: "12px 32px", background: "transparent", border: "1px solid #ccc", color: "#0A0A0A", fontSize: 12, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase" as const, cursor: "pointer", fontFamily: "inherit" }}
+        className="hover:border-[#0A0A0A] hover:text-[#E8151B] transition-colors"
       >
         {allLoaded ? "View All on YouTube →" : "Show More Episodes"}
       </button>

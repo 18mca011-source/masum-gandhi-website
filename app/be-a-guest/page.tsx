@@ -66,11 +66,11 @@ const faqs = [
 ];
 
 const s = {
-  section: (bg: string, extra = {}) => ({ background: bg, borderTop: "1px solid #1a1a1a", ...extra } as React.CSSProperties),
+  section: (bg: string, extra = {}) => ({ background: bg, borderTop: "1px solid #e5e5e5", ...extra } as React.CSSProperties),
   eyebrow: { fontSize: 11, fontWeight: 700, letterSpacing: "0.25em", textTransform: "uppercase" as const, color: "#E8151B", marginBottom: 12 } as React.CSSProperties,
-  title: { fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(36px, 5vw, 64px)", color: "#fff", letterSpacing: "0.03em", marginBottom: 8 } as React.CSSProperties,
+  title: { fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(36px, 5vw, 64px)", color: "#0A0A0A", letterSpacing: "0.03em", marginBottom: 8 } as React.CSSProperties,
   yellow: { color: "#E8151B" } as React.CSSProperties,
-  sub: { fontSize: 15, color: "#888", marginBottom: 48, lineHeight: 1.6 } as React.CSSProperties,
+  sub: { fontSize: 15, color: "#555", marginBottom: 48, lineHeight: 1.6 } as React.CSSProperties,
 };
 
 export default function BeAGuestPage() {
@@ -85,8 +85,8 @@ export default function BeAGuestPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center max-w-[1200px] mx-auto px-6 md:px-12 pt-32 md:pt-36 pb-16 md:pb-20">
           <div>
             <div style={s.eyebrow}>Be a Guest</div>
-            <h1 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(64px, 8vw, 112px)", lineHeight: 0.88, letterSpacing: "0.02em", color: "#fff", marginBottom: 24 }}>Share<br />Your<br />Story.</h1>
-            <p style={{ fontSize: 16, lineHeight: 1.75, color: "#888", marginBottom: 36 }}>Join 90+ industry leaders who&apos;ve sat across from Masum to share their real journey — the wins, the failures, and everything in between.</p>
+            <h1 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(64px, 8vw, 112px)", lineHeight: 0.88, letterSpacing: "0.02em", color: "#0A0A0A", marginBottom: 24 }}>Share<br />Your<br />Story.</h1>
+            <p style={{ fontSize: 16, lineHeight: 1.75, color: "#555", marginBottom: 36 }}>Join 90+ industry leaders who&apos;ve sat across from Masum to share their real journey — the wins, the failures, and everything in between.</p>
             <a href="https://calendly.com/masumgandhi/30min" target="_blank" rel="noopener noreferrer"
               style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "#E8151B", color: "#fff", fontWeight: 700, fontSize: 13, letterSpacing: "0.08em", textTransform: "uppercase", padding: "14px 28px", borderRadius: 2, textDecoration: "none" }}
               className="hover:opacity-85 transition-opacity">
@@ -95,21 +95,21 @@ export default function BeAGuestPage() {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: 20 }}>
             {[["90+","Episodes"],["10M+","Total Views"],["52K+","Community"],["Every Sat","New Episode"]].map(([val,label])=>(
-              <div key={label} style={{ background: "#1a1a1a", border: "1px solid #2a2a2a", padding: "24px 20px" }}>
+              <div key={label} style={{ background: "#f5f5f5", border: "1px solid #e5e5e5", padding: "24px 20px" }}>
                 <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 42, color: "#E8151B", lineHeight: 1 }}>{val}</div>
-                <div style={{ fontSize: 11, color: "#555", textTransform: "uppercase", letterSpacing: "0.1em", marginTop: 4 }}>{label}</div>
+                <div style={{ fontSize: 11, color: "#777", textTransform: "uppercase", letterSpacing: "0.1em", marginTop: 4 }}>{label}</div>
               </div>
             ))}
           </div>
         </div>
 
         {/* HEALTHCARE */}
-        <section style={s.section("#111")} className="py-12 md:py-20 px-6 md:px-12">
+        <section style={s.section("#f5f5f5")} className="py-12 md:py-20 px-6 md:px-12">
           <div style={{ maxWidth: 1200, margin: "0 auto" }}>
             <div style={{ maxWidth: 680, marginBottom: 32 }}>
               <div style={s.eyebrow}>Featured Category</div>
               <h2 style={s.title}>A Platform Trusted by<br /><span style={s.yellow}>Healthcare Experts</span></h2>
-              <p style={{ fontSize: 15, color: "#777", lineHeight: 1.7, marginTop: 16 }}>
+              <p style={{ fontSize: 15, color: "#555", lineHeight: 1.7, marginTop: 16 }}>
                 Featuring in-depth conversations with leading healthcare professionals including gynecologists, psychiatrists, dentists, oncologists, and diabetes specialists offering credible insights on mental health, women&apos;s health, and lifestyle.
               </p>
             </div>
@@ -132,16 +132,16 @@ export default function BeAGuestPage() {
         </section>
 
         {/* GUESTS FROM */}
-        <section style={s.section("#0A0A0A")} className="py-12 md:py-20 px-6 md:px-12">
+        <section style={s.section("#ffffff")} className="py-12 md:py-20 px-6 md:px-12">
           <div style={{ maxWidth: 1200, margin: "0 auto" }}>
             <div style={s.eyebrow}>Guest Categories</div>
             <h2 style={s.title}>Guests <span style={s.yellow}>From</span></h2>
             <div className="grid grid-cols-2 sm:grid-cols-4" style={{ gap: 2, marginTop: 40 }}>
               {categories.map((c) => (
-                <div key={c.label} style={{ background: "#1a1a1a", border: "1px solid #2a2a2a", padding: "28px 20px", display: "flex", flexDirection: "column", gap: 12 }}
-                  className="hover:bg-[#222] transition-colors">
+                <div key={c.label} style={{ background: "#f5f5f5", border: "1px solid #e5e5e5", padding: "28px 20px", display: "flex", flexDirection: "column", gap: 12 }}
+                  className="hover:bg-white transition-colors">
                   <span style={{ fontSize: 28, lineHeight: 1 }}>{c.emoji}</span>
-                  <span style={{ fontSize: 13, fontWeight: 500, color: "#aaa", lineHeight: 1.4 }}>{c.label}</span>
+                  <span style={{ fontSize: 13, fontWeight: 500, color: "#555", lineHeight: 1.4 }}>{c.label}</span>
                 </div>
               ))}
             </div>
@@ -149,7 +149,7 @@ export default function BeAGuestPage() {
         </section>
 
         {/* FEATURED GUESTS */}
-        <section style={s.section("#0A0A0A")} id="featured" className="py-12 md:py-20 px-6 md:px-12">
+        <section style={s.section("#f5f5f5")} id="featured" className="py-12 md:py-20 px-6 md:px-12">
           <div style={{ maxWidth: 1200, margin: "0 auto" }}>
             <div style={s.eyebrow}>Who&apos;s Been On</div>
             <h2 style={s.title}>Our Featured <span style={s.yellow}>Guests</span></h2>
@@ -206,26 +206,26 @@ export default function BeAGuestPage() {
                   </div>
                 ))}
               </div>
-              <div style={{ pointerEvents: "none", position: "absolute", top: 0, right: 0, bottom: 0, width: 80, background: "linear-gradient(to left, rgba(10,10,10,0.9), transparent)" }} />
+              <div style={{ pointerEvents: "none", position: "absolute", top: 0, right: 0, bottom: 0, width: 80, background: "linear-gradient(to left, rgba(245,245,245,0.9), transparent)" }} />
             </div>
           </div>
         </section>
 
         {/* JOURNEY */}
-        <section style={s.section("#111")} id="journey" className="py-12 md:py-20 px-6 md:px-12">
+        <section style={s.section("#ffffff")} id="journey" className="py-12 md:py-20 px-6 md:px-12">
           <div style={{ maxWidth: 860, margin: "0 auto" }}>
             <div style={s.eyebrow}>The Process</div>
             <h2 style={s.title}>Your Journey as <span style={s.yellow}>Our Guest</span></h2>
-            <p style={{ fontSize: 15, color: "#888", marginBottom: 56, lineHeight: 1.6 }}>A seamless, professional experience from start to finish.</p>
-            <div style={{ borderLeft: "1px solid #333", paddingLeft: 40 }}>
+            <p style={{ fontSize: 15, color: "#555", marginBottom: 56, lineHeight: 1.6 }}>A seamless, professional experience from start to finish.</p>
+            <div style={{ borderLeft: "1px solid #ddd", paddingLeft: 40 }}>
               {steps.map((step, i) => (
                 <div key={step.n} style={{ display: "grid", gridTemplateColumns: "56px 1fr", gap: 20, alignItems: "flex-start", paddingBottom: i < steps.length - 1 ? 48 : 0, position: "relative" }}>
                   <div style={{ content: '""', position: "absolute", left: -44, top: 8, width: 8, height: 8, borderRadius: "50%", background: "#E8151B", boxShadow: "0 0 0 4px rgba(232,21,27,0.15)" }} />
-                  <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 48, color: "#333", lineHeight: 1, paddingTop: 4 }}>{step.n}</div>
+                  <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 48, color: "#ccc", lineHeight: 1, paddingTop: 4 }}>{step.n}</div>
                   <div>
                     <div style={{ fontSize: 10, fontWeight: 700, letterSpacing: "0.2em", color: "#E8151B", textTransform: "uppercase", marginBottom: 6 }}>Step {step.n}</div>
-                    <div style={{ fontSize: 18, fontWeight: 700, color: "#fff", marginBottom: 8 }}>{step.title}</div>
-                    <div style={{ fontSize: 14, lineHeight: 1.7, color: "#888" }}>{step.desc}</div>
+                    <div style={{ fontSize: 18, fontWeight: 700, color: "#0A0A0A", marginBottom: 8 }}>{step.title}</div>
+                    <div style={{ fontSize: 14, lineHeight: 1.7, color: "#555" }}>{step.desc}</div>
                   </div>
                 </div>
               ))}
@@ -234,22 +234,22 @@ export default function BeAGuestPage() {
         </section>
 
         {/* FAQ */}
-        <section style={s.section("#0A0A0A")} id="faq" className="py-12 md:py-20 px-6 md:px-12">
+        <section style={s.section("#f5f5f5")} id="faq" className="py-12 md:py-20 px-6 md:px-12">
           <div style={{ maxWidth: 800, margin: "0 auto" }}>
             <div style={s.eyebrow}>Got Questions?</div>
             <h2 style={s.title}>Everything you need to <span style={s.yellow}>know</span></h2>
-            <p style={{ fontSize: 15, color: "#888", marginBottom: 48, lineHeight: 1.6 }}>Your questions about becoming a guest, answered.</p>
+            <p style={{ fontSize: 15, color: "#555", marginBottom: 48, lineHeight: 1.6 }}>Your questions about becoming a guest, answered.</p>
             <div>
               {faqs.map((faq, i) => (
-                <div key={i} style={{ borderBottom: "1px solid #222" }}>
+                <div key={i} style={{ borderBottom: "1px solid #ddd" }}>
                   <button onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                    style={{ width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 16, background: "none", border: "none", padding: "22px 0", fontSize: 15, fontWeight: 600, color: "#fff", cursor: "pointer", textAlign: "left", fontFamily: "inherit" }}
+                    style={{ width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center", gap: 16, background: "none", border: "none", padding: "22px 0", fontSize: 15, fontWeight: 600, color: "#0A0A0A", cursor: "pointer", textAlign: "left", fontFamily: "inherit" }}
                     className="hover:text-[#E8151B] transition-colors">
                     <span>{faq.q}</span>
                     <span style={{ fontSize: 22, color: "#E8151B", flexShrink: 0, fontWeight: 300, transition: "transform .2s", transform: openFaq === i ? "rotate(45deg)" : "none" }}>+</span>
                   </button>
                   {openFaq === i && (
-                    <div style={{ fontSize: 14, lineHeight: 1.8, color: "#777", paddingBottom: 22 }}>{faq.a}</div>
+                    <div style={{ fontSize: 14, lineHeight: 1.8, color: "#555", paddingBottom: 22 }}>{faq.a}</div>
                   )}
                 </div>
               ))}

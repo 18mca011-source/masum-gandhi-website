@@ -48,34 +48,34 @@ export default function WorkWithMe() {
       <Navbar logoRed={false} />
       <main>
         {/* HERO */}
-        <section style={{ padding: "120px 24px 64px", textAlign: "center", background: "#0A0A0A" }}>
+        <section style={{ padding: "120px 24px 64px", textAlign: "center", background: "#ffffff" }}>
           <div style={{ fontSize: 11, letterSpacing: "0.18em", color: "#E8151B", textTransform: "uppercase", marginBottom: 16, fontFamily: "'Inter', sans-serif", fontWeight: 600 }}>
             Join the Team
           </div>
-          <h1 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(52px, 10vw, 120px)", lineHeight: 0.92, letterSpacing: "0.02em", color: "#fff", margin: 0 }}>
+          <h1 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(52px, 10vw, 120px)", lineHeight: 0.92, letterSpacing: "0.02em", color: "#0A0A0A", margin: 0 }}>
             Work With <span style={{ color: "#E8151B" }}>Me</span>
           </h1>
-          <p style={{ marginTop: 24, maxWidth: 560, margin: "24px auto 0", fontFamily: "'Inter', sans-serif", fontSize: 15, lineHeight: 1.75, color: "#666" }}>
+          <p style={{ marginTop: 24, maxWidth: 560, margin: "24px auto 0", fontFamily: "'Inter', sans-serif", fontSize: 15, lineHeight: 1.75, color: "#555" }}>
             We&apos;re building India&apos;s most impactful podcast team. If you&apos;re passionate about content, storytelling, and growth — we want to hear from you.
           </p>
         </section>
 
         {/* ROLES */}
-        <section style={{ background: "#0A0A0A", padding: "0 24px 60px" }}>
+        <section style={{ background: "#f5f5f5", padding: "0 24px 60px", borderTop: "1px solid #e5e5e5" }}>
           <div style={{ maxWidth: 1100, margin: "0 auto" }}>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3" style={{ gap: 3 }}>
               {roles.map((role) => (
-                <div key={role.title} style={{ background: "#111", border: "1px solid #1e1e1e", padding: "28px 22px 24px", display: "flex", flexDirection: "column", gap: 12 }}>
+                <div key={role.title} style={{ background: "#ffffff", border: "1px solid #e5e5e5", padding: "28px 22px 24px", display: "flex", flexDirection: "column", gap: 12 }}>
                   <div style={{ fontSize: 28 }}>{role.emoji}</div>
-                  <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 24, letterSpacing: "0.04em", color: "#fff", margin: 0, lineHeight: 1 }}>
+                  <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 24, letterSpacing: "0.04em", color: "#0A0A0A", margin: 0, lineHeight: 1 }}>
                     {role.title}
                   </h2>
-                  <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 13, lineHeight: 1.7, color: "#777", margin: 0 }}>
+                  <p style={{ fontFamily: "'Inter', sans-serif", fontSize: 13, lineHeight: 1.7, color: "#555", margin: 0 }}>
                     {role.desc}
                   </p>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: 5, marginTop: "auto" }}>
                     {role.skills.map((s) => (
-                      <span key={s} style={{ fontSize: 10, fontFamily: "'Inter', sans-serif", fontWeight: 600, letterSpacing: "0.06em", padding: "3px 8px", border: "1px solid #2a2a2a", color: "#555", textTransform: "uppercase" }}>
+                      <span key={s} style={{ fontSize: 10, fontFamily: "'Inter', sans-serif", fontWeight: 600, letterSpacing: "0.06em", padding: "3px 8px", border: "1px solid #ddd", color: "#666", textTransform: "uppercase" }}>
                         {s}
                       </span>
                     ))}

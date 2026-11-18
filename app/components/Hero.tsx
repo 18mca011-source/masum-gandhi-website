@@ -4,19 +4,19 @@ export default function Hero() {
       <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "clamp(72px, 14vw, 180px)", lineHeight: 0.9, letterSpacing: "0.02em", color: "#E8151B" }}>
         Masum Gandhi
       </div>
-      <p style={{ marginTop: 14, maxWidth: 520, fontFamily: "'Inter', sans-serif", fontSize: 15, lineHeight: 1.7, color: "#666" }}>
+      <p style={{ marginTop: 14, maxWidth: 520, fontFamily: "'Inter', sans-serif", fontSize: 15, lineHeight: 1.7, color: "#555" }}>
         Welcome to the Masum Gandhi Podcast, where I discuss business, healthcare, and the unfiltered reality of success with India&apos;s most fascinating minds.
       </p>
       <div style={{ marginTop: 32, display: "flex", flexWrap: "wrap" as const, gap: 10, justifyContent: "center" }}>
         <a href="https://www.youtube.com/@masumngandhi" target="_blank" rel="noopener noreferrer"
-          style={{ display: "flex", alignItems: "center", gap: 8, padding: "9px 18px", borderRadius: 100, border: "1px solid #333", background: "#1a1a1a", color: "#fff", textDecoration: "none", fontSize: 13, fontWeight: 500 }}
-          className="hover:border-white transition-colors">
+          style={{ display: "flex", alignItems: "center", gap: 8, padding: "9px 18px", borderRadius: 100, border: "1px solid #ddd", background: "#f5f5f5", color: "#0A0A0A", textDecoration: "none", fontSize: 13, fontWeight: 500 }}
+          className="hover:border-[#0A0A0A] transition-colors">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
           YouTube
         </a>
         <a href="https://www.instagram.com/masumgandhi_/" target="_blank" rel="noopener noreferrer"
-          style={{ display: "flex", alignItems: "center", gap: 8, padding: "9px 18px", borderRadius: 100, border: "1px solid #333", background: "#1a1a1a", color: "#fff", textDecoration: "none", fontSize: 13, fontWeight: 500 }}
-          className="hover:border-white transition-colors">
+          style={{ display: "flex", alignItems: "center", gap: 8, padding: "9px 18px", borderRadius: 100, border: "1px solid #ddd", background: "#f5f5f5", color: "#0A0A0A", textDecoration: "none", fontSize: 13, fontWeight: 500 }}
+          className="hover:border-[#0A0A0A] transition-colors">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="url(#ig-g)" strokeWidth="2">
             <defs>
               <linearGradient id="ig-g" x1="0%" y1="100%" x2="100%" y2="0%">
