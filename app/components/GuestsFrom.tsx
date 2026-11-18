@@ -11,7 +11,7 @@ const categories = [
 
 export default function GuestsFrom() {
   return (
-    <section className="bg-white py-16 md:py-20 border-t border-black/8">
+    <section className="bg-white py-16 md:py-20 border-t border-[#e5e5e5]">
       <div className="max-w-[1200px] mx-auto px-6">
         <p className="text-[11px] font-semibold tracking-[0.2em] uppercase text-primary mb-3">Industries</p>
         <h2 className="font-headline text-5xl md:text-7xl text-[#0A0A0A] leading-none mb-10">

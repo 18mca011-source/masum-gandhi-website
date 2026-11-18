@@ -17,7 +17,7 @@ export default function GuestJourney() {
           Your Journey<br />as Our Guest
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-black/8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-[#ddd]">
           {steps.map((step) => {
             const Icon = step.icon;
             return (

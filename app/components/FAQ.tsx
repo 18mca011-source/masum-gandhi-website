@@ -24,7 +24,7 @@ export default function FAQ() {
           Everything You<br />Need to Know
         </h2>
 
-        <div className="space-y-px bg-black/8">
+        <div className="space-y-px bg-[#ddd]">
           {faqs.map((faq, i) => (
             <div key={i} className="bg-[#F8F8F8]">
               <button

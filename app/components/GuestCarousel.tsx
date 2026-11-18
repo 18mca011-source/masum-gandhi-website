@@ -52,13 +52,13 @@ export default function GuestCarousel({ title }: { title: string }) {
       </div>
 
       {/* Row 1: wide left + right */}
-      <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-[3px] bg-black/8">
+      <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-[3px] bg-[#e5e5e5]">
         <GuestCard guest={f0} className="aspect-[4/3]" />
         <GuestCard guest={f1} className="aspect-[4/3]" />
       </div>
 
       {/* Row 2: 3-col */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-[3px] bg-black/8 mt-[3px]">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-[3px] bg-[#e5e5e5] mt-[3px]">
         <GuestCard guest={f2} className="aspect-[4/3]" />
         <GuestCard guest={f3} className="aspect-[4/3]" />
         <GuestCard guest={f4} className="aspect-[4/3]" />

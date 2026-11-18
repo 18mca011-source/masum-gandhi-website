@@ -26,7 +26,7 @@ export default function HealthcareGuests() {
         </p>
 
         {/* Bento 3-col grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[3px] bg-black/8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-[3px] bg-[#e5e5e5]">
           {doctors.map((doc) => (
             <div key={doc.name} className="relative overflow-hidden aspect-[4/5] group">
               <Image

@@ -23,7 +23,7 @@ export default function CoreOffering() {
           A platform built for real stories, real credibility and real results — here&apos;s what makes every guest&apos;s experience exceptional.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-black/8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#ddd]">
           {usps.map((usp, i) => {
             const Icon = usp.icon;
             return (
