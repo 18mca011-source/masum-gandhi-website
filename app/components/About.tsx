@@ -10,9 +10,6 @@ export default function About() {
             alt="Masum Gandhi"
             style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block" }}
           />
-          {/* Mobile: fade bottom edge only; Desktop: fade right edge only — starts at 70% */}
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, transparent 60%, #f5f5f5 100%)" }} className="md:hidden" />
-          <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to right, transparent 65%, #f5f5f5 100%)" }} className="hidden md:block" />
         </div>
 
         {/* Right: text */}
