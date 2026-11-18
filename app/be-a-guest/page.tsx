@@ -206,7 +206,7 @@ export default function BeAGuestPage() {
                   </div>
                 ))}
               </div>
-              <div style={{ pointerEvents: "none", position: "absolute", top: 0, right: 0, bottom: 0, width: 80, background: "linear-gradient(to left, rgba(245,245,245,0.9), transparent)" }} />
+              <div style={{ pointerEvents: "none", position: "absolute", top: 0, right: 0, bottom: 0, width: 60, background: "linear-gradient(to left, rgba(245,245,245,0.5), transparent)" }} />
             </div>
           </div>
         </section>

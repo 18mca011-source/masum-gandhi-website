@@ -94,7 +94,7 @@ export default function GuestCarousel({ title }: { title: string }) {
           ))}
         </div>
         {/* Right fade */}
-        <div className="pointer-events-none absolute top-0 right-0 bottom-0 w-20 bg-gradient-to-l from-white/90 to-transparent" />
+        <div className="pointer-events-none absolute top-0 right-0 bottom-0 w-16 bg-gradient-to-l from-white/50 to-transparent" />
       </div>
     </div>
   );

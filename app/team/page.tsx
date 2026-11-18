@@ -30,9 +30,9 @@ export default function Team() {
           </p>
         </section>
 
-        {/* ORG CHART */}
-        <section style={{ padding: "0 24px 80px" }}>
-          <div style={{ maxWidth: 900, margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center", gap: 0 }}>
+        {/* ORG CHART — desktop tree */}
+        <section className="hidden md:block" style={{ padding: "0 24px 80px" }}>
+          <div style={{ maxWidth: 900, margin: "0 auto", display: "flex", flexDirection: "column", alignItems: "center" }}>
 
             {/* MASUM */}
             <div style={{ background: "#E8151B", padding: "24px 40px", textAlign: "center", minWidth: 220 }}>
@@ -44,7 +44,6 @@ export default function Team() {
               </div>
             </div>
 
-            {/* Connector line */}
             <div style={{ width: 1, height: 36, background: "#ddd" }} />
 
             {/* MAZAM */}
@@ -57,22 +56,17 @@ export default function Team() {
               </div>
             </div>
 
-            {/* Connector line down */}
             <div style={{ width: 1, height: 36, background: "#ddd" }} />
 
-            {/* Horizontal spanning line */}
-            <div style={{ width: "100%", position: "relative", display: "flex", justifyContent: "center" }}>
+            {/* Horizontal branch */}
+            <div style={{ width: "100%", position: "relative" }}>
               <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 1, background: "#e5e5e5" }} />
-
-              {/* Vertical drops + cards */}
               <div style={{ width: "100%", display: "flex", gap: 3, alignItems: "flex-start" }}>
                 {teamRoles.map((role) => (
                   <div key={role} style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center" }}>
-                    {/* Drop line + dot */}
                     <div style={{ width: 1, height: 24, background: "#e5e5e5" }} />
                     <div style={{ width: 7, height: 7, borderRadius: "50%", background: "#E8151B", marginBottom: 8 }} />
-                    {/* Card */}
-                    <div style={{ width: "100%", background: "#f5f5f5", border: "1px solid #e5e5e5", padding: "16px 8px", textAlign: "center" }}>
+                    <div style={{ width: "100%", background: "#f5f5f5", border: "1px solid #e5e5e5", padding: "16px 6px", textAlign: "center" }}>
                       <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: "#555", lineHeight: 1.5 }}>
                         {role}
                       </div>
@@ -82,6 +76,49 @@ export default function Team() {
               </div>
             </div>
 
+          </div>
+        </section>
+
+        {/* MOBILE layout */}
+        <section className="md:hidden" style={{ padding: "0 20px 64px" }}>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 0, marginBottom: 32 }}>
+
+            {/* MASUM */}
+            <div style={{ background: "#E8151B", padding: "20px 32px", textAlign: "center", width: "100%", maxWidth: 320 }}>
+              <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 26, letterSpacing: "0.06em", color: "#fff", lineHeight: 1 }}>
+                Masum Gandhi
+              </div>
+              <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "rgba(255,255,255,0.75)", marginTop: 6 }}>
+                Host &amp; Founder
+              </div>
+            </div>
+
+            <div style={{ width: 1, height: 28, background: "#ddd" }} />
+
+            {/* MAZAM */}
+            <div style={{ background: "#f5f5f5", border: "1px solid #E8151B", padding: "18px 32px", textAlign: "center", width: "100%", maxWidth: 320 }}>
+              <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 22, letterSpacing: "0.06em", color: "#0A0A0A", lineHeight: 1 }}>
+                Mazam Majmudar
+              </div>
+              <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: "0.12em", textTransform: "uppercase", color: "#E8151B", marginTop: 6 }}>
+                Senior Manager
+              </div>
+            </div>
+
+            <div style={{ width: 1, height: 28, background: "#ddd" }} />
+            <div style={{ width: 7, height: 7, borderRadius: "50%", background: "#E8151B" }} />
+          </div>
+
+          {/* Role cards grid */}
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 }}>
+            {teamRoles.map((role) => (
+              <div key={role} style={{ background: "#f5f5f5", border: "1px solid #e5e5e5", padding: "18px 12px", textAlign: "center" }}>
+                <div style={{ width: 20, height: 2, background: "#E8151B", margin: "0 auto 10px" }} />
+                <div style={{ fontFamily: "'Inter', sans-serif", fontSize: 11, fontWeight: 700, letterSpacing: "0.06em", textTransform: "uppercase", color: "#0A0A0A", lineHeight: 1.5 }}>
+                  {role}
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
